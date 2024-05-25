@@ -13,6 +13,7 @@ import Timeline from "./TimeLine/TimeLine";
 import { FcAcceptDatabase } from "react-icons/fc";
 import { FcDeleteDatabase } from "react-icons/fc";
 import { FcDatabase } from "react-icons/fc";
+import ListGroup from "./ListGroup/ListGroup";
 
 
 
@@ -111,14 +112,25 @@ const Home = () => {
                 </div>
 
                 <div className="kpi-section">
-                    <div className="chart-main">
-                        <BarChart chartData={chartData} />
+                    <div className="chart-calender-project">
+                        <div className="chart-calender">
+                            <div className="chart-main">
+                                <BarChart chartData={chartData} />
+                            </div>
+                            <div className='calendar-section'>
+                                <MyCalendar />
+                            </div>
+                        </div>
+                        <div className="list-section">
+                            <h2 style={{ textAlign: "center" }}>List Projects</h2>
+                            <ListGroup />
+                        </div>
                     </div>
-                    <div className='calendar-section'>
-                        <MyCalendar />
+                    <div className="timeline-section">
+                        <Timeline items={timelineItems} />
                     </div>
-                    <Timeline items={timelineItems} />
                 </div>
+
 
 
             </div>

@@ -6,7 +6,7 @@ import TimelineItem from "./TimelineItem";
 
 const Timeline = ({ items }) => {
     return (
-        <TimelineList title="Timeline" style={{ border: '1px solid #A8A8A8' }}>
+        <TimelineList title="Lịch sử hoạt động" style={{ border: '1px solid #A8A8A8' }}>
             {items.map((item, index) => (
                 <TimelineItem
                     key={index}
