@@ -1,3 +1,8 @@
+.pro-sidebar>.pro-sidebar-inner {
+    background-color: #82AAE3;
+    color: #ffffff;
+}
+
 .sidebar-btn-wrapper {
     display: flex;
     align-items: center;
@@ -8,8 +13,7 @@
         width: 150px;
         padding: 1px 15px;
         border-radius: 40px;
-        background: rgba(255, 255, 255, 0.05);
-        color: #adadad;
+        color: #ffffff;
         text-decoration: none;
         margin: 0 auto;
         height: 35px;
@@ -28,4 +32,13 @@
             color: #dee2ec;
         }
     }
+}
+
+.active {
+    background-color: #00bfff; // Change this to your desired active background color
+    color: white; // Change this to your desired active text color
+}
+
+.active a {
+    color: white; // Ensures the link text color is also changed
 }

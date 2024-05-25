@@ -20,28 +20,41 @@ body {
   }
 }
 
-
 .app-container {
   display: flex;
-  border: 3px solid black;
-  height: 100%;
+  height: 100vh;
+  /* Full height of the viewport */
+}
 
-  .sidebar-content {
-    border: 3px solid rgb(203, 66, 66);
+.sidebar-content {
+  flex: 0 0 auto;
+  /* Adjust width as needed */
+}
 
-  }
+.main-content {
+  flex: 1;
+  /* Take up the remaining space */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  /* Full height of the viewport */
+}
 
-  .main-content {
-    border: 3px solid black;
-    width: 100%;
+.navbar-content {
+  position: fixed;
+  width: calc(100% -
+      /* width of sidebar here, example */
+      250px);
+  top: 0;
+  z-index: 1000;
+  /* Add any other styles needed for the navbar */
+}
 
-    .navbar-content {
-
-      border: 3px solid rgb(56, 24, 151);
-    }
-
-    .app-content {
-      border: 3px solid rgb(61, 175, 149);
-    }
-  }
+.app-content {
+  margin-top: 60px;
+  /* Height of the navbar */
+  overflow-y: auto;
+  padding: 20px;
+  height: calc(100vh - 60px);
+  /* Full height minus navbar height */
 }
