@@ -1,4 +1,4 @@
-const Statistical = () => {
+const Project = () => {
     return (
 
         <div className="statistical-container">
@@ -13,4 +13,4 @@ const Statistical = () => {
     )
 }
 
-export default Statistical;
+export default Project;
