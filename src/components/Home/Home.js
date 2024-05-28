@@ -80,7 +80,7 @@ const Home = () => {
                             <Card.Link > <FcBusiness /> </Card.Link>
                         </Card.Body>
                     </Card>
-                    <Card className="card-2" style={{ width: '16rem' }}>
+                    <Card className="card-2" style={{ width: '18rem' }}>
                         <Card.Body>
                             <Card.Title>Lượng công việc đã làm</Card.Title>
                             <Card.Text>
@@ -89,7 +89,7 @@ const Home = () => {
                             <Card.Link href="#">Another Link</Card.Link>
                         </Card.Body>
                     </Card>
-                    <Card className="card-3" style={{ width: '16rem' }}>
+                    <Card className="card-3" style={{ width: '18rem' }}>
                         <Card.Body>
                             <Card.Title>Tổng thời gian làm việc</Card.Title>
                             <Card.Text>
@@ -99,16 +99,7 @@ const Home = () => {
                             <Card.Link href="#">Another Link</Card.Link>
                         </Card.Body>
                     </Card>
-                    <Card className="card-4" style={{ width: '16rem' }}>
-                        <Card.Body>
-                            <Card.Title>Tổng thời gian làm việc</Card.Title>
-                            <Card.Text>
-                                10 tiếng
-                            </Card.Text>
 
-                            <Card.Link href="#">Another Link</Card.Link>
-                        </Card.Body>
-                    </Card>
                 </div>
 
                 <div className="kpi-section">
@@ -121,14 +112,9 @@ const Home = () => {
                                 <MyCalendar />
                             </div>
                         </div>
-                        <div className="list-section">
-                            <h2 style={{ textAlign: "center" }}>List Projects</h2>
-                            <ListGroup />
-                        </div>
+
                     </div>
-                    <div className="timeline-section">
-                        <Timeline items={timelineItems} />
-                    </div>
+
                 </div>
 
 
