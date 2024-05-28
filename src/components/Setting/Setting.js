@@ -6,8 +6,11 @@ import key from '../../assets/Key.svg';
 import ho_so from '../../assets/flopy.svg';
 import user from '../../assets/Person.svg';
 import thong_bao from '../../assets/thong-bao.svg';
+import { useNavigate } from 'react-router-dom';
 
 const Setting = () => {
+    const navigate = useNavigate();
+
     return (
 
         <div className="setting-container">
@@ -68,7 +71,7 @@ const Setting = () => {
             <div className="thong-bao">
                 <img style={{ width: 24, height: 24 }} src={thong_bao} />
                 <span>Thong bao</span>
-                <button className='cai-dat'>Cai dat</button>
+                <button className='cai-dat' onClick={() => { navigate("/setting/notify") }}>Cai dat</button>
             </div>
         </div>
     )
