@@ -1,41 +1,34 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import { FaHome, FaUser, FaCog } from 'react-icons/fa';
-import InputGroup from 'react-bootstrap/InputGroup';
-import { IoIosHelpCircleOutline } from "react-icons/io";
+import './NavBar.scss';
+import search_logo from '../../assets/logo-search.svg';
+import notifi_logo from '../../assets/notification-logo.svg';
+import avatar from '../../assets/avatar.svg';
 
 const NavBar = () => {
     return (
+        <div className='navbar-container'>
+            <div className="search">
+                <div className='search-logo'>
+                    <img style={{ width: 16, height: 16 }} src={search_logo} className='search_logo' />
+                </div>
+                <div className="input-text">
+                    <span>Search here</span>
+                </div>
+            </div>
 
-        <Navbar expand="lg" className="bg-body-tertiary">
-            <Container>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav" className="justify-content-between">
-                    <Nav className="mx-auto align-items-center w-100">
-                        <Form className="d-flex mx-auto search-form">
-                            <InputGroup>
-                                <Form.Control
-                                    type="text"
-                                    placeholder="Search"
-                                    className="search-input"
-                                />
-                                <Button variant="outline-success">Search</Button>
+            <div className="notifi-profile">
+                <div className='notifi'>
+                    <img style={{ width: 40, height: 40 }} src={notifi_logo} />
+                </div>
+                <div className='profile'>
+                    <div style={{ width: '100%', height: '100%', color: 'rgba(35.70, 66.63, 229.06, 0.56)', fontSize: 9, fontFamily: 'Poppins', fontWeight: '500', letterSpacing: 0.33, wordWrap: 'break-word' }}>Quyền Chí Long<br />20210000</div>
+                    <div className="avatar">
+                        <img style={{ width: 40, height: 40 }} src={avatar} />
+                    </div>
+                </div>
+            </div>
 
-                            </InputGroup>
-                        </Form>
-                        <div className="nav-icons ml-auto">
-                            <Button variant="link" className="nav-icon-btn" style={{ fontSize: '24px' }}><IoIosHelpCircleOutline /></Button>
-                            <Button variant="link" className="nav-icon-btn" style={{ fontSize: '24px' }}><FaUser /></Button>
-                            <Button variant="link" className="nav-icon-btn" style={{ fontSize: '24px' }}><FaCog /></Button>
-                        </div>
-                    </Nav>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
+        </div>
 
     );
 }
