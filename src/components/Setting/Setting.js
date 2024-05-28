@@ -23,7 +23,7 @@ const Setting = () => {
                 </div>
 
                 <div className='button-dang-xuat'>
-                    <button className='button-dang-xuat-1'>Dang xuat</button>
+                    <button className='button-dang-xuat-1' onClick={() => { navigate("/login") }}>Dang xuat</button>
                 </div>
 
             </div>

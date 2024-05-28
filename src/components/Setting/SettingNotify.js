@@ -56,16 +56,6 @@ const SettingNotify = () => {
                     <div style={{ width: '100%', height: '100%', border: '1px #081C15 solid' }}></div>
                 </div>
 
-                <div className='box-ho-so'>
-                    <div className='box-ho-so-1'>
-                        <span>Ho so</span>
-
-                        <React.Fragment>
-                            <ToggleSwitch label="Save" />
-                        </React.Fragment>
-                    </div>
-                    <div style={{ width: '100%', height: '100%', border: '1px #081C15 solid' }}></div>
-                </div>
 
                 <div className='luu-ttdn'>
                     <div className='luu-ttdn-main'>
