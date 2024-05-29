@@ -22,12 +22,16 @@ const Layout = () => {
                 <Route path="/" element={<App />}>
                     <Route index element={<Home />} />
                     <Route path="project" element={<Project />} />
+
                     <Route path="kpi" element={<KPI />} />
+                    <Route path="/kpi/giangday" element={<GiangDay />} />
+                    <Route path="/kpi/giangday/chitiet" element={<KPIDetail />} />
+
                     <Route path="calender" element={<Calender />} />
                     <Route path="setting" element={<Setting />} />
                     <Route path="/setting/notify" element={<SettingNotify />} />
-                    <Route path="/kpi/giangday" element={<GiangDay />} />
-                    <Route path="/kpi/giangday/chitiet" element={<KPIDetail />} />
+
+
                 </Route>
                 <Route path="/login" element={<Login />} >
                 </Route>
