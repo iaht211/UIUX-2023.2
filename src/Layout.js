@@ -8,7 +8,7 @@ import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
 import KPI from "./components/KPI/KPI";
 import Calender from "./components/Calender/Calender";
-import Add_kpi from "./components/Add_kpi/Add_kpi";
+import Add_KPI from "./components/KPI/AddKPI";
 import Add_task from "./components/Add_task/Add_task";
 import Setting from "./components/Setting/Setting";
 import Project from "./components/Project/Statistical";
@@ -26,7 +26,7 @@ const Layout = () => {
                     <Route path="project" element={<Project />} />
                     <Route path="kpi" element={<KPI />} />
                     <Route path="calender" element={<Calender />} />
-                    <Route path="add_kpi" element={<Add_kpi />} />
+                    <Route path="add_kpi" element={<Add_KPI />} />
                     <Route path="add_task" element={<Add_task />} />
                     <Route path="setting" element={<Setting />} />
                     <Route path="/setting/notify" element={<SettingNotify />} />
