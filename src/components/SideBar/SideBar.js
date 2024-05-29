@@ -63,14 +63,14 @@ const SideBar = (props) => {
                     </MenuItem>
                     <MenuItem
                         icon={<FaBoxArchive />}
-                        className={pathname === '/kpi' ? 'active' : ''}
+                        className={pathname === '/project' ? 'active' : ''}
                     >
                         Dự án
                         <Link to="/project" />
                     </MenuItem>
                     <MenuItem
                         icon={<FaChartBar />}
-                        className={pathname === '/kpi' ? 'active' : ''}
+                        className={pathname.startsWith('/kpi') ? 'active' : ''}
                     >
                         KPI
                         <Link to="/kpi" />

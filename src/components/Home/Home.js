@@ -8,7 +8,7 @@ import {
 import './Home.scss'
 import BarChart from "./Data/BarChart";  // Adjust the import path as needed
 import { FcBusiness } from "react-icons/fc";
-import MyCalendar from "../Calender/Calender";
+import MyCalendar from "./Calender/Calender";
 
 
 const Home = () => {
