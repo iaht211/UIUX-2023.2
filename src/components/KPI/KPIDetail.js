@@ -5,34 +5,40 @@ import { Gauge, gaugeClasses } from '@mui/x-charts/Gauge';
 import React, { useState } from 'react';
 import Item from './Item';
 import plus from '../../assets/plus.svg';
+import { useLocation } from 'react-router-dom';
 
 const KPIDetail = () => {
+
     const [items, setItems] = useState([
         { id: 1, name: 'Write Report', date: '07/04/2024', numbers: '735 words' },
         { id: 2, name: 'Chấm bài về nhà', date: '08/05/2024', numbers: '30 bài' },
         { id: 3, name: 'Giảng dạy UI&UX lớp 4321', date: '09/06/2024', numbers: '100 tiết' },
     ]);
 
+    const location = useLocation();
+    const itemKPI = location.state;
+
     const handleRemove = (id) => {
         setItems(items.filter(item => item.id !== id));
     };
+
     return (
         <div className="kpi-detail-container">
             <div className='content-1'>
                 <div className="infor-kpi">
                     <div className="header">
-                        <span>UI&UX</span>
+                        <span>{itemKPI.name}</span>
                     </div>
                     <div className="content">
-                        <span>Giang day mon UI&UX</span>
+                        <span>{itemKPI.description}</span>
                     </div>
 
                     <div className="time">
                         <div className="start">
-                            Ngay bat dau 01/06/2023
+                            Ngay bat dau {itemKPI.start_date}
                         </div>
                         <div className="deadline">
-                            Deadline: 1/4/2024
+                            Deadline {itemKPI.end_date}
                         </div>
                     </div>
                 </div>
@@ -50,7 +56,7 @@ const KPIDetail = () => {
 
             <div className="chart">
                 <Gauge
-                    value={60}
+                    value={itemKPI.score}
                     startAngle={0}
                     endAngle={360}
                     innerRadius="80%"
