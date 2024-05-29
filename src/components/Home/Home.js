@@ -9,12 +9,6 @@ import './Home.scss'
 import BarChart from "./Data/BarChart";  // Adjust the import path as needed
 import { FcBusiness } from "react-icons/fc";
 import MyCalendar from "../Calender/Calender";
-import Timeline from "./TimeLine/TimeLine";
-import { FcAcceptDatabase } from "react-icons/fc";
-import { FcDeleteDatabase } from "react-icons/fc";
-import { FcDatabase } from "react-icons/fc";
-import ListGroup from "./ListGroup/ListGroup";
-
 
 
 const Home = () => {
@@ -36,33 +30,6 @@ const Home = () => {
         ],
     });
 
-    const timelineItems = [
-        {
-            color: "success",
-            icon: <FcAcceptDatabase />,
-            title: "$2400 Design changes",
-            dateTime: "22 DEC 7:20 PM",
-            description: "People care about how you see the world, how you think, what motivates you, what you’re struggling with or afraid of.",
-            badges: ["design"],
-        },
-        {
-            color: "error",
-            icon: <FcDeleteDatabase />,
-            title: "New order #1832412",
-            dateTime: "21 DEC 11 PM",
-            description: "People care about how you see the world, how you think, what motivates you, what you’re struggling with or afraid of.",
-            badges: ["order", "#1832412"],
-        },
-        {
-            icon: <FcDatabase />,
-            title: "Server payments for April",
-            dateTime: "21 DEC 9:34 PM",
-            description: "People care about how you see the world, how you think, what motivates you, what you’re struggling with or afraid of.",
-            badges: ["server", "payments"],
-            lastItem: true,
-        },
-    ];
-
     return (
         <div className='home-container'>
 
@@ -71,7 +38,6 @@ const Home = () => {
                     <Card className="card-1" style={{ width: '18rem' }}>
                         <Card.Body>
                             <Card.Title>Lượng Project đang thực hiện</Card.Title>
-                            {/* <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle> */}
                             <Card.Text>
                                 5 Projects
                             </Card.Text>

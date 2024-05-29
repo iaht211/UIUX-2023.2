@@ -1,11 +1,12 @@
 .calendar-container {
     text-align: center;
-    width: 260px;
+    width: 400px;
 
     .react-calendar {
         width: 100% !important; // Override default max-width
         height: 300px !important;
         border-radius: 5px;
+        margin-left: 45px;
     }
 
     p {
@@ -20,5 +21,14 @@
 
     .bold {
         font-weight: bold;
+    }
+
+    .text-center {
+        margin-left: 45px;
+        width: 100%;
+
+        span {
+            font-size: small;
+        }
     }
 }
