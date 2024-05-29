@@ -47,7 +47,7 @@ function CalendarMain() {
                     end: "dayGridMonth,timeGridWeek,timeGridDay",
                 }}
                 height={"90vh"}
-                locale={viLocale}
+
                 events={events}
                 eventRender={(info) => (
                     <div>
