@@ -16,14 +16,14 @@ const AddKPI = () => {
     const lastId = location.state;
     const navigate = useNavigate();
 
-    const item_add = {
-        id: lastId.lastId + 1,
-        name: kpiName,
-        start_date: startDate,
-        end_date: endDate,
-        description: description,
-        score: 0
-    }
+    // const item_add = {
+    //     id: lastId.lastId + 1,
+    //     name: kpiName,
+    //     start_date: startDate,
+    //     end_date: endDate,
+    //     description: description,
+    //     score: 0
+    // }
 
     const handleCancel = () => {
         setKpiName('');
@@ -38,6 +38,14 @@ const AddKPI = () => {
     };
 
     const handleAddKPI = () => {
+        const item_add = {
+            id: lastId.lastId + 1,
+            name: kpiName,
+            start_date: "08/04/12",
+            end_date: "09/06/12",
+            description: description,
+            score: 0
+        }
         navigate('/kpi/giangday', { state: { item_add } })
     }
 
