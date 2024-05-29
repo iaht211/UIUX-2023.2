@@ -5,6 +5,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 In the project directory, you can run:
+### `npm i`
+install module/package
+### `npm install react-datepicker`
+### `npm install --save moment react-moment`
+install react-datepicker
 
 ### `npm start`
 

@@ -23,6 +23,7 @@ const Layout = () => {
                     <Route path="project" element={<Project />} />
 
                     <Route path="kpi" element={<KPI />} />
+
                     <Route path="/kpi/giangday" element={<GiangDay />} />
                     <Route path="/kpi/giangday/chitiet" element={<KPIDetail />} />
 
