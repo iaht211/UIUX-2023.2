@@ -7,6 +7,12 @@ import 'react-toastify/dist/ReactToastify.css';
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
 import KPI from "./components/KPI/KPI";
+<<<<<<< HEAD
+=======
+import Calender from "./components/Calender/Calender";
+import Add_kpi from "./components/Add_kpi/Add_kpi";
+import Add_task from "./components/Add_task/Add_task";
+>>>>>>> 85f862ccba017da19163140e279c82c3fd282597
 import Setting from "./components/Setting/Setting";
 import Project from "./components/Project/Statistical";
 import SettingNotify from "./components/Setting/SettingNotify";
@@ -23,6 +29,14 @@ const Layout = () => {
                     <Route path="project" element={<Project />} />
 
                     <Route path="kpi" element={<KPI />} />
+<<<<<<< HEAD
+=======
+                    <Route path="calender" element={<Calender />} />
+                    <Route path="add_kpi" element={<Add_kpi />} />
+                    <Route path="add_task" element={<Add_task />} />
+                    <Route path="setting" element={<Setting />} />
+                    <Route path="/setting/notify" element={<SettingNotify />} />
+>>>>>>> 85f862ccba017da19163140e279c82c3fd282597
                     <Route path="/kpi/giangday" element={<GiangDay />} />
                     <Route path="/kpi/giangday/chitiet" element={<KPIDetail />} />
 

@@ -60,4 +60,4 @@ function CalendarMain() {
     );
 }
 
-export default CalendarMain;
+export default MyCalendar;
