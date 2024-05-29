@@ -4,6 +4,7 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import viLocale from "@fullcalendar/core/locales/vi"; // Import ngôn ngữ tiếng Việt
+import "./Calender.scss"
 
 function CalendarMain() {
     const events = [
