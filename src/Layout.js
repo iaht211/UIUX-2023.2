@@ -14,8 +14,11 @@ import Setting from "./components/Setting/Setting";
 import Project from "./components/Project/Statistical";
 import SettingNotify from "./components/Setting/SettingNotify";
 import GiangDay from "./components/KPI/GiangDay";
+import GiangDayAddKPI from "./components/KPI/GiangDayAddKPI";
 import KPIDetail from "./components/KPI/KPIDetail";
 import CalendarMain from "./components/Calender/Calender"
+import PasswordChange from "./components/Setting/PasswordChange";
+import ProfileChange from "./components/Setting/ProfileChange";
 
 const Layout = () => {
     return (
@@ -38,8 +41,7 @@ const Layout = () => {
                     <Route path="setting" element={<Setting />} />
                     <Route path="/setting/notify" element={<SettingNotify />} />
                     <Route path="/setting/changepassword" element={<PasswordChange />} />
-
-
+                    <Route path="/setting/changeprofile" element={<ProfileChange />} />
                 </Route>
                 <Route path="/login" element={<Login />} >
                 </Route>
