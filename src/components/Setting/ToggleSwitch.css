@@ -45,7 +45,7 @@
 .inner:before {
   content: "YES";
   padding-left: 10px;
-  background-color: #82AAE3;
+  background-color: #060;
   color: #fff;
 }
 
@@ -78,5 +78,3 @@
 .checkbox:checked+.label .switch {
   right: 0px;
 }
-
-

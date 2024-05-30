@@ -9,6 +9,9 @@ import './Home.scss'
 import BarChart from "./Data/BarChart";  // Adjust the import path as needed
 import { FcBusiness } from "react-icons/fc";
 import MyCalendar from "./Calender/Calender";
+import bookImage from "../../assets/education_img.png"
+import chartImage from "../../assets/Remove-bg 1.png"
+import humanImage from "../../assets/Rectangle 126.png"
 
 
 const Home = () => {
@@ -35,37 +38,38 @@ const Home = () => {
 
             <div className='home-content'>
                 <div className='card-class'>
-                    <Card className="card-1" style={{ width: '18rem' }}>
+                    <Card className="card-1" style={{ width: '18rem', height: "14rem" }}>
                         <Card.Body>
-                            <Card.Title>Lượng Project đang thực hiện</Card.Title>
-                            <Card.Text>
-                                5 Projects
+                            <Card.Title style={{ textAlign: 'center' }}>Tổng chỉ tiêu tháng này</Card.Title>
+                            <Card.Text style={{ fontSize: '30px', textAlign: 'center', margin: "0px" }}>
+                                145
                             </Card.Text>
+                            <Card.Img src={bookImage} alt="Card image cap" style={{ width: "130px", marginLeft: "150px" }} />
 
-                            <Card.Link href="#">Thiết lập KPI</Card.Link>
-                            <Card.Link > <FcBusiness /> </Card.Link>
                         </Card.Body>
                     </Card>
-                    <Card className="card-2" style={{ width: '18rem' }}>
+                    <Card className="card-2" style={{ width: '18rem', height: "14rem" }}>
+
                         <Card.Body>
-                            <Card.Title>Lượng công việc đã làm</Card.Title>
-                            <Card.Text>
-                                130 CV
+                            <Card.Title style={{ textAlign: 'center' }}>Chỉ tiêu tháng này</Card.Title>
+                            <Card.Text style={{ fontSize: '30px', textAlign: 'center', margin: "0px" }}>
+                                12
                             </Card.Text>
-                            <Card.Link href="#">Another Link</Card.Link>
+                            <Card.Img src={chartImage} alt="Card image cap" style={{ width: "130px", marginLeft: "150px" }} />
+                        </Card.Body>
+
+                    </Card>
+                    <Card className="card-3" style={{ width: '18rem', height: "14rem" }}>
+
+                        <Card.Body>
+                            <Card.Title style={{ textAlign: 'center' }}>Chỉ tiêu tháng tới</Card.Title>
+                            <Card.Text style={{ fontSize: '30px', textAlign: 'center', margin: "0px" }}>
+                                15
+                            </Card.Text>
+                            <Card.Img src={humanImage} alt="Card image cap" style={{ width: "130px", marginLeft: "150px", height: "130px" }} />
+
                         </Card.Body>
                     </Card>
-                    <Card className="card-3" style={{ width: '18rem' }}>
-                        <Card.Body>
-                            <Card.Title>Tổng thời gian làm việc</Card.Title>
-                            <Card.Text>
-                                10 tiếng
-                            </Card.Text>
-
-                            <Card.Link href="#">Another Link</Card.Link>
-                        </Card.Body>
-                    </Card>
-
                 </div>
 
                 <div className="kpi-section">

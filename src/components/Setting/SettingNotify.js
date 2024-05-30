@@ -1,65 +1,72 @@
 import './SettingNotify.scss';
+import avatar from '../../assets/avatar.svg';
 import ToggleSwitch from '../Setting/ToggleSwitch';
-import React from "react";
+import React, { Component } from "react";
+
 
 const SettingNotify = () => {
     return (
+
         <div className="setting-container">
-            <div className='setting-header'>
+            <div className='header'>
                 <span>Quản lý thông báo</span>
             </div>
-            <div className="notification-settings">
-                <div className="setting-section">
-                    <div className='setting-item'>
+            <div>
+                <div className="bao-mat-1">
+                    <div className='box-bao-mat'>
                         <span>Chế độ</span>
-                        <div className='separator'></div>
+                        <div style={{ width: '100%', height: '100%', border: '1px #081C15 solid' }}></div>
                     </div>
 
-                    <div className='setting-item'>
-                        <div className='setting-description'>
+                    <div className='box-doi-pass'>
+                        <div className='box-doi-pass-1'>
                             <span>Nhận thông báo chung</span>
                             <React.Fragment>
-                                <ToggleSwitch label="Save" id="toggle1" />
+                                <ToggleSwitch label="Save" />
                             </React.Fragment>
                         </div>
-                        <div className='separator'></div>
+                        <div style={{ width: '100%', height: '100%', border: '1px #081C15 solid' }}></div>
                     </div>
 
-                    <div className='setting-item'>
-                        <div className='setting-description'>
+                    <div className='box-ho-so'>
+                        <div className='box-ho-so-1'>
                             <span>Nhảy pop up thông báo</span>
                             <React.Fragment>
-                                <ToggleSwitch label="Save" id="toggle2" />
+                                <ToggleSwitch label="Save" />
                             </React.Fragment>
                         </div>
-                        <div className='separator'></div>
+                        <div style={{ width: '100%', height: '100%', border: '1px #081C15 solid' }}></div>
                     </div>
                 </div>
             </div>
-            <div className="event-settings">
-                <div className='setting-item'>
+            <div className="bao-mat">
+                <div className='box-bao-mat'>
                     <span>Sự kiện</span>
-                    <div className='separator'></div>
+                    <div style={{ width: '100%', height: '100%', border: '1px #081C15 solid' }}></div>
                 </div>
 
-                <div className='setting-item'>
-                    <div className='setting-description'>
-                        <span>Thông báo thêm chỉ tiêu</span>
+                <div className='box-doi-pass'>
+                    <div className='box-doi-pass-1'>
+                        <span>Nhận thông báo được thêm chỉ tiêu</span>
                         <React.Fragment>
-                            <ToggleSwitch label="Save" id="toggle3" />
+                            <ToggleSwitch label="Save" />
                         </React.Fragment>
+
                     </div>
-                    <div className='separator'></div>
+                    <div style={{ width: '100%', height: '100%', border: '1px #081C15 solid' }}></div>
                 </div>
 
-                <div className='setting-item'>
-                    <div className='setting-description'>
-                        <span>Thông báo deadline</span>
+
+                <div className='luu-ttdn'>
+                    <div className='luu-ttdn-main'>
+
+                        <span className='name-test'>Nhận thông báo deadline sắp hết hạn</span>
+
                         <React.Fragment>
-                            <ToggleSwitch label="Save" id="toggle4" />
+                            <ToggleSwitch label="Save" />
                         </React.Fragment>
                     </div>
-                    <div className='separator'></div>
+                    <div style={{ width: '100%', height: '100%', border: '1px #081C15 solid' }}></div>
                 </div>
             </div>
         </div>
