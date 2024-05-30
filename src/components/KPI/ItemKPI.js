@@ -5,9 +5,8 @@ import './ItemKPI.scss';
 import edit_task_kpi from '../../assets/edit_task_kpi.svg';
 import delete_task_kpi from '../../assets/delete_task_kpi.svg';
 import { FaArrowRight } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
-const ItemKPI = ({ item, onRemove }) => {
+const ItemKPI = ({ item, onRemove, onEdit }) => {
     const navigate = useNavigate();
 
     const item_kpi_state = {
@@ -59,16 +58,14 @@ const ItemKPI = ({ item, onRemove }) => {
 
                 <div className='edit-delete-button'>
                     <button className='edit-button-kpi'>
-                        <img style={{ width: 24, height: 24 }} src={edit_task_kpi} />
+                        <img style={{ width: 24, height: 24 }} src={edit_task_kpi} onClick={() => onEdit(item.id)} />
                     </button>
                     <button className='delete-button-kpi' onClick={() => onRemove(item.id)}>
                         <img style={{ width: 24, height: 24 }} src={delete_task_kpi} />
                     </button>
-
                     <button className='navigate-button-kpi' onClick={handleClick}>
                         <FaArrowRight />
                     </button>
-
                 </div>
             </div>
         </div>
