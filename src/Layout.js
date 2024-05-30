@@ -16,7 +16,6 @@ import Setting from "./components/Setting/Setting";
 import Project from "./components/Project/Statistical";
 import SettingNotify from "./components/Setting/SettingNotify";
 import GiangDay from "./components/KPI/GiangDay";
-import GiangDayAddKPI from "./components/KPI/GiangDayAddKPI";
 import KPIDetail from "./components/KPI/KPIDetail";
 import CalendarMain from "./components/Calender/Calender"
 import GiangDayAddKPI from "./components/KPI/GiangDayAddKPI";
