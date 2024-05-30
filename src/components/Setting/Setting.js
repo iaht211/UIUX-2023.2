@@ -44,7 +44,7 @@ const Setting = () => {
                     <div className='luu-ttdn-main'>
                         <img src={user} alt="User" />
                         <span>Lưu thông tin</span>
-                        <ToggleSwitch label="Save" />
+                        <ToggleSwitch label="Save" id = "toggleSave"/>
                     </div>
                 </div>
             </div>
