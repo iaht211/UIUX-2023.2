@@ -74,7 +74,7 @@ const SideBar = (props) => {
                         className={pathname.startsWith('/kpi') ? 'active' : ''}
                     >
                         KPI
-                        <Link to="/kpi" />
+                        <Link to="/kpi/giangday" />
                     </MenuItem>
                     <MenuItem
                         icon={<SlCalender />}
