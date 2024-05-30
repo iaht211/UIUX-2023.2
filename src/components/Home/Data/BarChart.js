@@ -28,13 +28,6 @@ const BarChart = ({ chartData }) => {
                                 text: 'Projects'
                             }
                         },
-                        // y: {
-                        //     stacked: false,
-                        //     title: {
-                        //         display: true,
-
-                        //     }
-                        // }
                     }
                 }}
             />
