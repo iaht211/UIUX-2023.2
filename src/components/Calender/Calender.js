@@ -60,11 +60,8 @@ function CalendarMain() {
     );
 }
 
-<<<<<<< HEAD
-export default MyCalendar;
-=======
 export default CalendarMain
 
 
 
->>>>>>> thai_develop
+
