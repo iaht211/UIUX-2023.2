@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import DatePicker from 'react-datepicker';
-
 import 'react-datepicker/dist/react-datepicker.css';
 
 const Add_kpi = () => {
-  
+  const navigate = useNavigate();
+
   const [kpiName, setKpiName] = useState('');
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
@@ -18,8 +19,11 @@ const Add_kpi = () => {
   };
 
   const handleDelete = () => {
-    // Add logic to handle delete
     console.log('Deleted');
+  };
+
+  const handleAddTask = () => {
+    navigate.push('/add-task');
   };
 
   return (
@@ -50,10 +54,9 @@ const Add_kpi = () => {
           <DatePicker
             selected={startDate}
             onChange={(date) => setStartDate(date)}
-            dateFormat="MMMM d, yyyy h:mm aa"
-            showTimeSelect
+            dateFormat="dd/MM/yyyy"
             timeFormat="HH:mm"
-            placeholderText="Month, day, year, time"
+            placeholderText="Day, month, year"
             style={{ padding: '12px', width: '100%', marginTop: '10px', fontSize: '18px' }}
           />
         </div>
@@ -62,16 +65,15 @@ const Add_kpi = () => {
           <DatePicker
             selected={endDate}
             onChange={(date) => setEndDate(date)}
-            dateFormat="MMMM d, yyyy h:mm aa"
-            showTimeSelect
+            dateFormat="dd/MM/yyyy"         
             timeFormat="HH:mm"
-            placeholderText="Month, day, year, time"
+            placeholderText="Day, month, year"
             style={{ padding: '12px', width: '100%', marginTop: '10px', fontSize: '18px' }}
           />
         </div>
       </div>
       <div style={{ marginBottom: '20px' }}>
-        <label>Descriptions:</label>
+        <label>Mô tả:</label>
         <textarea
           placeholder="Write something"
           value={description}
@@ -80,7 +82,7 @@ const Add_kpi = () => {
         />
       </div>
       <div style={{ marginBottom: '20px', textAlign: 'right' }}>
-        <button type="button" style={{ padding: '1px 4px', backgroundColor: '#28a745', color: 'white', border: 'none', borderRadius: '5px', fontSize: '14px' }}>
+        <button type="button" onClick={handleAddTask} style={{ padding: '1px 4px', backgroundColor: '#28a745', color: 'white', border: 'none', borderRadius: '5px', fontSize: '14px' }}>
           Thêm nhiệm vụ
         </button>
       </div>
