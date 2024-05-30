@@ -1,14 +1,14 @@
 import './KPIDetail.scss';
 import edit_task_kpi from '../../assets/edit_task_kpi.svg';
 import delete_task_kpi from '../../assets/delete_task_kpi.svg';
-import { Gauge, gaugeClasses } from '@mui/x-charts/Gauge';
+import { Gauge } from '@mui/x-charts/Gauge';
 import React, { useState } from 'react';
 import Item from './Item';
 import plus from '../../assets/plus.svg';
 import { useLocation } from 'react-router-dom';
+import AddTask from './AddTask';
 
 const KPIDetail = () => {
-
     const [items, setItems] = useState([
         { id: 1, name: 'Write Report', date: '07/04/2024', numbers: '735 words' },
         { id: 2, name: 'Chấm bài về nhà', date: '08/05/2024', numbers: '30 bài' },
@@ -17,9 +17,18 @@ const KPIDetail = () => {
 
     const location = useLocation();
     const itemKPI = location.state;
+    const [showModal, setShowModal] = useState(false);
 
     const handleRemove = (id) => {
         setItems(items.filter(item => item.id !== id));
+    };
+
+    const handleAddTaskClick = () => {
+        setShowModal(true);
+    };
+
+    const handleCloseModal = () => {
+        setShowModal(false);
     };
 
     return (
@@ -49,7 +58,6 @@ const KPIDetail = () => {
                     </button>
                     <button className='delete-button-kpi'>
                         <img style={{ width: 24, height: 24 }} src={delete_task_kpi} />
-
                     </button>
                 </div>
             </div>
@@ -61,9 +69,7 @@ const KPIDetail = () => {
                     endAngle={360}
                     innerRadius="80%"
                     outerRadius="100%"
-                // ...
                 />
-
             </div>
 
             <div className="list-task">
@@ -75,13 +81,18 @@ const KPIDetail = () => {
             </div>
 
             <div style={{ width: '100%', height: '100%', paddingTop: 5, paddingBottom: 5, borderRadius: 8, overflow: 'hidden', justifyContent: 'center', alignItems: 'center', gap: 8, display: 'inline-flex' }}>
-                <div style={{ flex: '1 1 0', height: 53, paddingLeft: 24, paddingRight: 24, paddingTop: 13, paddingBottom: 13, borderRadius: 8, border: '1px rgba(0, 0, 0, 0.20) dotted', justifyContent: 'center', alignItems: 'center', gap: 8, display: 'flex' }}>
+                <button
+                    onClick={handleAddTaskClick}
+                    style={{ flex: '1 1 0', height: 53, paddingLeft: 24, paddingRight: 24, paddingTop: 13, paddingBottom: 13, borderRadius: 8, border: '1px rgba(0, 0, 0, 0.20) dotted', justifyContent: 'center', alignItems: 'center', gap: 8, display: 'flex', backgroundColor: 'transparent', border: 'none', cursor: 'pointer' }}
+                >
                     <div>
                         <img style={{ width: 24, height: 24 }} src={plus} />
                     </div>
                     <div style={{ color: 'rgba(0, 0, 0, 0.20)', fontSize: 18, fontFamily: 'Roboto', fontWeight: '700', lineHeight: 27, wordWrap: 'break-word' }}>Thêm nhiệm vụ</div>
-                </div>
+                </button>
             </div>
+
+            {showModal && <AddTask onClose={handleCloseModal} />}
         </div>
     )
 }
