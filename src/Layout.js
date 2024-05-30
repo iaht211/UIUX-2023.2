@@ -33,7 +33,7 @@ const Layout = () => {
                     <Route path="add_task" element={<Add_task />} />
                     <Route path="setting" element={<Setting />} />
                     <Route path="/setting/notify" element={<SettingNotify />} />
-                    <Route path="/kpi/giangday" element={<GiangDay />} />
+                    <Route path="/kpi/giangday" element={<GiangDayAddKPI />} />
                     <Route path="/kpi/giangday/chitiet" element={<KPIDetail />} />
 
                     <Route path="calender" element={<CalendarMain />} />
