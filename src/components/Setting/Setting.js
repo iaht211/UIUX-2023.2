@@ -30,7 +30,7 @@ const Setting = () => {
                     <div className='box-doi-pass-1'>
                         <img src={key} alt="Key" />
                         <span>Đổi mật khẩu</span>
-                        <button className='chinh-sua'>Chỉnh sửa</button>
+                        <button className='doi-mat-khau' onClick={() => { navigate("/setting/changepassword") }}>Chỉnh sửa</button>
                     </div>
                 </div>
                 <div className='box-ho-so'>

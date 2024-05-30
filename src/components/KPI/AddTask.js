@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './Add_task.scss';
+import './AddTask.scss';
 
-const Add_task = ({ onClose }) => {
+const AddTask = ({ onClose }) => {
   const [taskName, setTaskName] = useState('');
   const [quantity, setQuantity] = useState('');
   const [unit, setUnit] = useState('');
@@ -83,4 +83,4 @@ const Add_task = ({ onClose }) => {
   );
 };
 
-export default Add_task;
+export default AddTask;

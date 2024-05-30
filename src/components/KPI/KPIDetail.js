@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 import Item from './Item';
 import plus from '../../assets/plus.svg';
 import { useLocation } from 'react-router-dom';
-import Add_task from './Add_task';
+import AddTask from './AddTask';
 
 const KPIDetail = () => {
     const [items, setItems] = useState([
@@ -92,7 +92,7 @@ const KPIDetail = () => {
                 </button>
             </div>
 
-            {showModal && <Add_task onClose={handleCloseModal} />}
+            {showModal && <AddTask onClose={handleCloseModal} />}
         </div>
     )
 }
