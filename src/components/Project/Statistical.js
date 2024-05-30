@@ -1,39 +1,31 @@
-import ChartDay from "../Chart/ChartDay";
+import ChartWeek from "../Chart/ChartWeek";
 import React, { useState } from 'react';
-import ChartMonth from "../Chart/ChartMonth";
 import ChartYear from "../Chart/ChartYear";
+import ChartMonth from "../Chart/ChartMonth";
+import "./Statustical.scss"
 
 const Project = () => {
     const [chartData, setChartData] = useState({
-        labels: ["Project 1", "Project 2", "Project 3", "Project 4", "Project 5"],
+        labels: ["Đã hoàn thành", "Chưa hoàn thành", "Đã quá hạn"],
         datasets: [
             {
-                label: "Đã làm",
-                data: [20, 70, 50, 80, 120],
-                backgroundColor: '#4A3AFF',
+                label: "Users Gained",
+                data: [100, 150, 200], // Replace with your actual user data
+                backgroundColor: [
+                    "#4A3AFF",
+                    "#C893FD",
+                    "#C6D2FD",
+                ],
+                borderColor: [
+                    "#4A3AFF",
+                    "#C893FD",
+                    "#C6D2FD",
+                ],
                 borderWidth: 1,
             },
-            {
-                label: "Chưa làm",
-                data: [80, 50, 70, 70, 100],
-                backgroundColor: '#FF0000',
-                borderWidth: 1,
-            },
-            {
-                label: "Quán hạn",
-                data: [80, 50, 70, 70, 100],
-                backgroundColor: '#C6D2FD',
-                borderWidth: 1,
-            },
-            {
-                label: "Đang làm",
-                data: [80, 50, 70, 70, 100],
-                backgroundColor: '#93AAFD',
-                borderWidth: 1,
-            }
         ],
     });
-    const chartYear = {
+    const chartMonth = {
         labels: [
             "Project A",
             "Project B",
@@ -42,37 +34,39 @@ const Project = () => {
         ],
         datasets: [
             {
-                label: "Q1",
+                label: "Đã hoàn thành",
                 data: [10, 20, 30, 40],
                 backgroundColor: "#4A3AFF"
             },
             {
-                label: "Q2",
+                label: "Chưa hoàn thành",
                 data: [15, 25, 35, 45],
-                backgroundColor: "#93AAFD"
+                backgroundColor: "#C893FD"
             },
             {
-                label: "Q3",
+                label: "Đã quá hạn",
                 data: [20, 30, 40, 50],
-                backgroundColor: "#FFD700"
-            },
-            {
-                label: "Q4",
-                data: [25, 35, 45, 55],
-                backgroundColor: "#FF4500"
+                backgroundColor: "#C6D2FD"
             }
         ]
     };
     return (
 
         <div className="statistical-container">
-            <div className="header">
-                header
-            </div>
             <div className="content">
-                <ChartDay chartData={chartData} />
-                <ChartMonth />
-                <ChartYear chartData={chartYear} />
+                <div className="chart-week">
+                    <ChartWeek chartData={chartData} />
+                </div>
+                <div className="chart-month">
+                    <ChartMonth chartData={chartMonth} />
+
+
+                </div>
+                <div className="chart-year">
+                    <ChartYear />
+
+                </div>
+
             </div>
         </div>
 
