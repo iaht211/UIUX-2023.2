@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './PasswordChange.scss';
 import { FaUnlockAlt } from 'react-icons/fa';
 import { toast } from 'react-toastify';
@@ -9,6 +10,7 @@ const PasswordChange = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -66,7 +68,7 @@ const PasswordChange = () => {
           <button type="submit">
             Xác nhận
           </button>
-          <button type="button" className="cancel-button">
+          <button type="button" className="cancel-button" onClick={() => { navigate("/setting") }}>
             Hủy
           </button>
         </form>
