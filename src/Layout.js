@@ -16,7 +16,6 @@ import SettingNotify from "./components/Setting/SettingNotify";
 import GiangDay from "./components/KPI/GiangDay";
 import KPIDetail from "./components/KPI/KPIDetail";
 import CalendarMain from "./components/Calender/Calender"
-import PasswordChange from "./components/Setting/PasswordChange";
 
 const Layout = () => {
     return (
@@ -32,7 +31,7 @@ const Layout = () => {
                     <Route path="add_task" element={<Add_task />} />
                     <Route path="setting" element={<Setting />} />
                     <Route path="/setting/notify" element={<SettingNotify />} />
-                    <Route path="/kpi/giangday" element={<GiangDay />} />
+                    <Route path="/kpi/giangday" element={<GiangDayAddKPI />} />
                     <Route path="/kpi/giangday/chitiet" element={<KPIDetail />} />
 
                     <Route path="calender" element={<CalendarMain />} />
