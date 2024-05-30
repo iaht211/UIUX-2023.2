@@ -62,14 +62,15 @@ const SideBar = (props) => {
                         <Link to="/" />
                     </MenuItem>
                     <MenuItem
-                        icon={<FaBoxArchive />}
+                        icon={<FaChartBar />}
+
                         className={pathname === '/project' ? 'active' : ''}
                     >
-                        Dự án
+                        Thống kê
                         <Link to="/project" />
                     </MenuItem>
                     <MenuItem
-                        icon={<FaChartBar />}
+                        icon={<FaBoxArchive />}
                         className={pathname.startsWith('/kpi') ? 'active' : ''}
                     >
                         KPI
@@ -84,14 +85,14 @@ const SideBar = (props) => {
                     </MenuItem>
                     <MenuItem
                         icon={<SlCalender />}
-                        className={pathname === '/calendar' ? 'active' : ''}
+                        className={pathname === '/add_task' ? 'active' : ''}
                     >
                         Thêm Task
                         <Link to="/add_task" />
                     </MenuItem>
                     <MenuItem
                         icon={<SlCalender />}
-                        className={pathname === '/calendar' ? 'active' : ''}
+                        className={pathname === '/calender' ? 'active' : ''}
                     >
                         Lịch
                         <Link to="/calender" />

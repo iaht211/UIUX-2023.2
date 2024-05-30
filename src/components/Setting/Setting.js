@@ -37,14 +37,14 @@ const Setting = () => {
                     <div className='box-ho-so-1'>
                         <img src={ho_so} alt="Ho so" />
                         <span>Hồ sơ</span>
-                        <button className='chinh-sua'>Chỉnh sửa</button>
+                        <button className='chinh-sua' onClick={() => { navigate("/setting/changeprofile") }}>Chỉnh sửa</button>
                     </div>
                 </div>
                 <div className='luu-ttdn'>
                     <div className='luu-ttdn-main'>
                         <img src={user} alt="User" />
                         <span>Lưu thông tin</span>
-                        <ToggleSwitch label="Save" />
+                        <ToggleSwitch label="Save" id = "toggleSave"/>
                     </div>
                 </div>
             </div>
