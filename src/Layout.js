@@ -19,7 +19,6 @@ import GiangDay from "./components/KPI/GiangDay";
 import GiangDayAddKPI from "./components/KPI/GiangDayAddKPI";
 import KPIDetail from "./components/KPI/KPIDetail";
 import CalendarMain from "./components/Calender/Calender"
-import GiangDayAddKPI from "./components/KPI/GiangDayAddKPI";
 import PasswordChange from "./components/Setting/PasswordChange";
 import ProfileChange from "./components/Setting/ProfileChange";
 
