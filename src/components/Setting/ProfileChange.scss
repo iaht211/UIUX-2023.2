@@ -6,6 +6,11 @@
   background-color: #f0f8ff;
   min-height: 100vh;
 
+  .back-page-button {
+    margin-right: 1200px;
+    cursor: pointer;
+  }
+
   .header {
     display: flex;
     flex-direction: column;
@@ -18,17 +23,21 @@
       border-radius: 50%;
       background-color: #89ACD6;
       margin-right: 20px;
-      overflow: hidden; /* Đảm bảo ảnh không tràn ra ngoài khung hình tròn */
+      overflow: hidden;
+      /* Đảm bảo ảnh không tràn ra ngoài khung hình tròn */
       display: flex;
       align-items: center;
       justify-content: center;
-  
+
       img {
-          width: 100%; /* Đảm bảo ảnh căn giữa và điền vào khung hình tròn */
-          height: 100%;
-          object-fit: cover; /* Căn giữa và điều chỉnh kích thước của ảnh để nó lấp đầy khung hình tròn */
+        width: 100%;
+        /* Đảm bảo ảnh căn giữa và điền vào khung hình tròn */
+        height: 100%;
+        object-fit: cover;
+        /* Căn giữa và điều chỉnh kích thước của ảnh để nó lấp đầy khung hình tròn */
       }
-  }
+    }
+
     .name {
       font-size: 24px;
       font-weight: bold;
@@ -53,7 +62,7 @@
       display: flex;
       align-items: center;
       margin-bottom: 15px;
-    
+
       .info-label {
         flex: 1;
         font-size: 14px;
@@ -67,13 +76,13 @@
         color: #4682b4;
         margin-right: 35px; // Thêm margin phía bên phải để tạo khoảng cách giữa nhãn và giá trị
       }
-    
+
       .info-value {
         flex: 2;
         font-size: 14px;
         color: #333;
       }
-    
+
       .edit-button {
         background-color: transparent;
         border: none;
@@ -81,12 +90,12 @@
         cursor: pointer;
         text-decoration: underline;
         font-size: 12px;
-    
+
         &:hover {
           color: #4169e1;
         }
       }
-    
+
       input {
         flex: 2;
         font-size: 14px;
@@ -97,6 +106,6 @@
         margin-right: 10px; // Thêm margin phía bên phải để tạo khoảng cách giữa ô input và nút chỉnh sửa
       }
     }
-    
+
   }
 }

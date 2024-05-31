@@ -4,6 +4,8 @@ import { FaUserGraduate } from 'react-icons/fa';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSave, faEdit } from '@fortawesome/free-solid-svg-icons'
 import avatar from '../../assets/avatar.svg';
+import { useNavigate } from 'react-router-dom';
+import { FaArrowLeft } from "react-icons/fa";
 
 const ProfileChange = () => {
   const [isEditing, setIsEditing] = useState({
@@ -33,8 +35,14 @@ const ProfileChange = () => {
     setIsEditing({ email: false, dob: false, phone: false });
   };
 
+  const navigate = useNavigate();
+
   return (
+
     <div className="profile-container">
+      <div className='back-page-button' onClick={() => { navigate('/setting') }}>
+        <FaArrowLeft></FaArrowLeft>
+      </div>
       <div className="header">
         <div className="avatar">
           <img src={avatar} alt="Avatar" />
@@ -43,25 +51,25 @@ const ProfileChange = () => {
         <div className="id">20210000</div>
       </div>
       <div className="info-container">
-      <div className="info-row">
-  <span className="info-label-edit">Email</span>
-  {isEditing.email ? (
-    <input
-      type="text"
-      name="email"
-      value={profileData.email}
-      onChange={handleChange}
-    />
-  ) : (
-    <span className="info-value">{profileData.email}</span>
-  )}
-  <button
-    className="edit-button"
-    onClick={() => isEditing.email ? handleSave() : handleEditClick('email')}
-  >
-    {isEditing.email ? <FontAwesomeIcon icon={faSave} /> : <FontAwesomeIcon icon={faEdit} />}
-  </button>
-</div>
+        <div className="info-row">
+          <span className="info-label-edit">Email</span>
+          {isEditing.email ? (
+            <input
+              type="text"
+              name="email"
+              value={profileData.email}
+              onChange={handleChange}
+            />
+          ) : (
+            <span className="info-value">{profileData.email}</span>
+          )}
+          <button
+            className="edit-button"
+            onClick={() => isEditing.email ? handleSave() : handleEditClick('email')}
+          >
+            {isEditing.email ? <FontAwesomeIcon icon={faSave} /> : <FontAwesomeIcon icon={faEdit} />}
+          </button>
+        </div>
         <div className="info-row">
           <span className="info-label-edit">Ngày sinh</span>
           {isEditing.dob ? (
