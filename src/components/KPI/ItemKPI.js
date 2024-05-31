@@ -63,12 +63,12 @@ const ItemKPI = ({ item, onRemove, onEdit }) => {
                     <button className='delete-button-kpi' onClick={() => onRemove(item.id)}>
                         <img style={{ width: 24, height: 24 }} src={delete_task_kpi} />
                     </button>
-                    <button className='navigate-button-kpi' onClick={handleClick}>
+                    <button className='navigate-button-kpi' onClick={handleClick} style={{ color: 'black' }}>
                         <FaArrowRight />
                     </button>
                 </div>
             </div>
-        </div>
+        </div >
 
     )
 }
