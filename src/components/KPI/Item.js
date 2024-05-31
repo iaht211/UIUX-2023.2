@@ -11,8 +11,10 @@ const Item = ({ item, onRemove }) => {
         classNameBoxShadow = 'highlight-on-time-box';
     } else if (item.id === 2) {
         classNameBoxShadow = 'highlight-on-doing-box';
-    } else {
+    } else if (item.id === 3) {
         classNameBoxShadow = 'highlight-on-late-box';
+    } else {
+        classNameBoxShadow = 'highlight-on-doing-box'
     }
 
     return (
@@ -26,8 +28,22 @@ const Item = ({ item, onRemove }) => {
                     <div className='icon-date'>
                         <img style={{ width: 14, height: 14 }} src={date_icon} />
                     </div>
-                    <div className='date'>{item.date}</div>
-                    <div className='numbers'>{item.numbers}</div>
+                    <div className='date'>
+                        <div className='start-date'>
+                            <span className='name-date'>
+                                Ngày bắt đầu
+                            </span>
+                            {item.start_date}
+                        </div>
+
+                        <div className='end-date'>
+                            <span className='name-date'>
+                                Ngày kết thúc
+                            </span>
+                            {item.end_date}
+                        </div>
+                    </div>
+                    <div className='numbers'>{item.numbers} {item.unit}</div>
                 </div>
             </div>
 
