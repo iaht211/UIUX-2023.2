@@ -11,6 +11,8 @@
     border-radius: 10;
 
     .right-task-item {
+        width: 300px;
+
         .name {}
 
         width: 200px;
@@ -18,13 +20,33 @@
         .date-numbers {
             display: flex;
             align-items: center;
-            width: 300px;
+            width: 500px;
 
             .icon-date {
                 margin-right: 11px;
             }
 
-            .date {}
+            .date {
+
+                .start-date {
+                    width: 300px;
+
+                    .name-date {
+                        margin-right: 20px;
+
+                    }
+
+                }
+
+                .end-date {
+                    width: 300px;
+
+                    .name-date {
+                        margin-right: 20px;
+
+                    }
+                }
+            }
 
             .numbers {
                 margin-left: 25px;
@@ -73,6 +95,8 @@
     border-radius: 10;
 
     .right-task-item {
+        width: 300px;
+
         .name {}
 
         width: 200px;
@@ -80,13 +104,33 @@
         .date-numbers {
             display: flex;
             align-items: center;
-            width: 300px;
+            width: 500px;
 
             .icon-date {
                 margin-right: 11px;
             }
 
-            .date {}
+            .date {
+
+                .start-date {
+                    width: 300px;
+
+                    .name-date {
+                        margin-right: 20px;
+
+                    }
+
+                }
+
+                .end-date {
+                    width: 300px;
+
+                    .name-date {
+                        margin-right: 20px;
+
+                    }
+                }
+            }
 
 
             .numbers {
@@ -138,6 +182,8 @@
     border-radius: 10;
 
     .right-task-item {
+        width: 300px;
+
         .name {}
 
         width: 200px;
@@ -145,13 +191,34 @@
         .date-numbers {
             display: flex;
             align-items: center;
-            width: 300px;
+            width: 500px;
 
             .icon-date {
                 margin-right: 11px;
             }
 
-            .date {}
+            .date {
+
+                .start-date {
+                    width: 300px;
+
+                    .name-date {
+                        margin-right: 20px;
+
+                    }
+
+                }
+
+                .end-date {
+                    width: 300px;
+
+                    .name-date {
+                        margin-right: 20px;
+
+                    }
+                }
+
+            }
 
 
             .numbers {

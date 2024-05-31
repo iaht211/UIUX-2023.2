@@ -6,30 +6,31 @@ import React, { useState } from 'react';
 import Item from './Item';
 import plus from '../../assets/plus.svg';
 import { useLocation } from 'react-router-dom';
-import AddTask from './AddTask';
+import AddTask from '../Task/AddTask';
+// import Add_task from '../Add_task/Add_task';
 
-const KPIDetail = () => {
-    const [items, setItems] = useState([
-        { id: 1, name: 'Write Report', date: '07/04/2024', numbers: '735 words' },
-        { id: 2, name: 'Chấm bài về nhà', date: '08/05/2024', numbers: '30 bài' },
-        { id: 3, name: 'Giảng dạy UI&UX lớp 4321', date: '09/06/2024', numbers: '100 tiết' },
-    ]);
+const KPIDetail = ({ items, setItems, displayAdd, setDisplayAdd, lastId, setLastId }) => {
+    // const [items, setItems] = useState([
+    //     { id: 1, name: 'Write Report', date: '07/04/2024', numbers: '735 words' },
+    //     { id: 2, name: 'Chấm bài về nhà', date: '08/05/2024', numbers: '30 bài' },
+    //     { id: 3, name: 'Giảng dạy UI&UX lớp 4321', date: '09/06/2024', numbers: '100 tiết' },
+    // ]);
 
     const location = useLocation();
     const itemKPI = location.state;
-    const [showModal, setShowModal] = useState(false);
+    // const [showModal, setShowModal] = useState(false);
 
     const handleRemove = (id) => {
         setItems(items.filter(item => item.id !== id));
     };
 
     const handleAddTaskClick = () => {
-        setShowModal(true);
+        setDisplayAdd(true);
     };
 
-    const handleCloseModal = () => {
-        setShowModal(false);
-    };
+    // const handleCloseModal = () => {
+    //     setShowModal(false);
+    // };
 
     return (
         <div className="kpi-detail-container">
@@ -52,14 +53,14 @@ const KPIDetail = () => {
                     </div>
                 </div>
 
-                <div className='box-button-kpi'>
+                {/* <div className='box-button-kpi'>
                     <button className='edit-button-kpi'>
                         <img style={{ width: 24, height: 24 }} src={edit_task_kpi} />
                     </button>
                     <button className='delete-button-kpi'>
                         <img style={{ width: 24, height: 24 }} src={delete_task_kpi} />
                     </button>
-                </div>
+                </div> */}
             </div>
 
             <div className="chart">
@@ -92,7 +93,7 @@ const KPIDetail = () => {
                 </button>
             </div>
 
-            {showModal && <AddTask onClose={handleCloseModal} />}
+            {/* {showModal && <AddTask onClose={handleCloseModal} />} */}
         </div>
     )
 }
