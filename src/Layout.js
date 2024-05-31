@@ -43,7 +43,7 @@ const Layout = () => {
                     <Route path="setting" element={<Setting />} />
                     <Route path="/setting/notify" element={<SettingNotify />} />
                     <Route path="/setting/changepassword" element={<PasswordChange />} />
-
+                    <Route path="/setting/changeprofile" element={<ProfileChange />} />
 
                 </Route>
                 <Route path="/login" element={<Login />} >
