@@ -12,7 +12,7 @@ const NavBar = () => {
                     <img style={{ width: 16, height: 16 }} src={search_logo} className='search_logo' />
                 </div>
                 <div className="input-text">
-                    <span>Search here</span>
+                <input type="text" placeholder="Search here..." />
                 </div>
             </div>
 
