@@ -1,20 +1,51 @@
+$mobile-width: 480;
+
+
+@mixin mobile {
+    @media (max-width: #{$mobile-width - 1px}) {
+        @content;
+    }
+}
+
+
 .login-container {
 
     display: flex;
     height: 100vh;
 
+    @include mobile {
+        flex-direction: column;
+    }
+
     .left-container {
         width: 100%;
         background-color: #D6EBF8;
 
+        @include mobile {
+            // height: 50%;
+        }
+
         .image-box {
             display: flex;
             justify-content: center;
-            width: 100%;
+
             height: 100%;
+            width: 100%;
+
+            @include mobile {
+                height: 400px;
+                width: 350px;
+                // flex-direction: column;
+                align-items: center;
+            }
 
             img {
                 margin-top: 250px;
+
+                @include mobile {
+                    margin-top: 0px;
+                    margin-left: 70px;
+                }
             }
         }
     }
@@ -23,39 +54,21 @@
 
         width: 100%;
 
-        .header {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            padding: 5px 110px 0px;
-
-            span {
-                color: rgb(76, 76, 76);
-                font-size: 16px;
-            }
-
-            button {
-                margin: 0px 5px;
-                padding: 7px 15px;
-                font-size: 13px;
-                border: 1px solid black;
-                background: #f4f4f5;
-                border-radius: 5px;
-
-                &:hover {
-                    background: white;
-                }
-            }
-
-            .contact-us {
-                text-decoration: underline;
-            }
-        }
-
         gap: 10px;
 
         .login-right {
             margin-top: 200px;
+
+            @include mobile {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+
+            @include mobile {
+                margin-top: 20px;
+            }
 
             .logo-small {
                 display: flex;
@@ -78,10 +91,20 @@
             }
 
             .content-form {
+                @include mobile {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
 
                 .form-group {
                     label {
                         padding: 5px 0;
+                    }
+
+                    @include mobile {
+                        width: 200px;
                     }
 
                     .form-control {
@@ -105,13 +128,31 @@
 
                 }
 
-                .btn-login {
-                    margin: 15px;
-                    width: 100%;
-                    height: 40px;
-                    border-radius: 40px;
-                    color: white;
-                    background: #82AAE3;
+                .login-box {
+                    margin-bottom: -10px;
+
+                    @include mobile {
+                        width: 100px;
+                    }
+
+                    .btn-login {
+                        margin: 15px;
+                        width: 100%;
+                        height: 40px;
+                        border-radius: 40px;
+                        color: white;
+                        background: #82AAE3;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+
+                        .text-login {
+                            width: 100px;
+                            height: 40px;
+                        }
+                    }
+
                 }
 
                 .back {
@@ -127,18 +168,49 @@
                     display: flex;
                     justify-content: center;
 
-                }
+                    @include mobile {
+                        // flex-direction: column;
+                        align-items: center;
+                    }
 
-                .office-365 {
-                    border: none;
-                    display: flex;
-                    justify-content: center;
-                    border-radius: 20px;
-                    background-color: #FA3E3E;
-                    color: white;
+                    .office-365 {
+                        border: none;
+                        display: flex;
+                        justify-content: center;
+                        border-radius: 20px;
+                        background-color: #FA3E3E;
+                        color: white;
+
+                        @include mobile {
+                            width: 130px;
+                            height: 40px;
+                        }
+
+                        .text-office {
+                            width: 100px;
+
+                            @include mobile {
+                                width: 100px;
+                                height: 40px;
+                            }
+                        }
+                    }
+
                 }
 
                 .option-dang-ki {
+                    display: flex;
+
+                    @include mobile {
+                        width: 230px;
+                    }
+
+                    .text-none {
+                        @include mobile {
+                            margin-right: 10px;
+                        }
+                    }
+
                     .text-option-dang-ki {
                         color: #FA3E3E;
                     }
