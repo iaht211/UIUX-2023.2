@@ -32,7 +32,7 @@ const Login = () => {
                             <img style={{ width: 60, height: 61 }} src={logo_small} />
                         </div>
                         <div className="title col-4 mx-auto">
-                            <h3>Dang nhap</h3>
+                            <h3>Đăng nhập</h3>
                         </div>
 
                         <div className="content-form col-4 mx-auto">
@@ -42,28 +42,35 @@ const Login = () => {
 
                             </div>
                             <div className="form-group">
-                                <label>Password</label>
+                                <label>Mật khẩu</label>
                                 <input type={"password"} className="form-control" value={password} onChange={(event) => setPassword(event.target.value)} />
                             </div>
                             <div className='forgot-password'>
-                                Quen mat khau
+                                Quên mật khẩu
                             </div>
-                            <div >
-                                <button className='btn-login col-4 mx-auto' onClick={handleClickBtnLogin}>Login </button>
+                            <div className='login-box'>
+                                <button className='btn-login col-4 mx-auto' onClick={handleClickBtnLogin}>
+                                    <div className='text-login'>
+                                        Đăng nhập
+                                    </div>
+                                </button>
                             </div>
                             <div className='text-option'>
-                                <span>Hoac</span>
+                                <span>Hoặc</span>
                             </div>
                             <div className='father-office-365'>
-
                                 <button className='office-365'>
                                     <img style={{ width: 24, height: 24 }} src={office_365_logo} className='svg-logo-365' />
-                                    Office 365
+                                    <div className='text-office'>
+                                        Office 365
+                                    </div>
                                 </button>
                             </div>
                             <div className='option-dang-ki'>
-                                <span>Chua co tai khoan ?</span>
-                                <span className='text-option-dang-ki'>Dang ky</span>
+                                <div className='text-none'>
+                                    Chưa có tài khoản?
+                                </div>
+                                <div className='text-option-dang-ki'>Đăng ký</div>
                             </div>
                         </div>
                     </div>
