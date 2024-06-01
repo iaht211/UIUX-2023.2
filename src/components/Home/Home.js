@@ -13,7 +13,6 @@ import bookImage from "../../assets/education_img.png"
 import chartImage from "../../assets/Remove-bg 1.png"
 import humanImage from "../../assets/Rectangle 126.png"
 
-
 const Home = () => {
     const [chartData, setChartData] = useState({
         labels: ["Project 1", "Project 2", "Project 3", "Project 4", "Project 5"],
@@ -35,38 +34,37 @@ const Home = () => {
 
     return (
         <div className='home-container'>
-
             <div className='home-content'>
                 <div className='card-class'>
-                    <Card className="card-1" style={{ width: '18rem', height: "14rem" }}>
+                    <Card className="card-1">
                         <Card.Body>
-                            <Card.Title style={{ textAlign: 'center' }}>Tổng chỉ tiêu tháng này</Card.Title>
-                            <Card.Text style={{ fontSize: '30px', textAlign: 'center', margin: "0px" }}>
+                            <Card.Title>Tổng chỉ tiêu tháng này</Card.Title>
+                            <Card.Text>
                                 145
                             </Card.Text>
-                            <Card.Img src={bookImage} alt="Card image cap" style={{ width: "130px", marginLeft: "150px" }} />
+                            <Card.Img src={bookImage} alt="Card image cap" />
 
                         </Card.Body>
                     </Card>
-                    <Card className="card-2" style={{ width: '18rem', height: "14rem" }}>
+                    <Card className="card-2">
 
                         <Card.Body>
-                            <Card.Title style={{ textAlign: 'center' }}>Chỉ tiêu tháng này</Card.Title>
-                            <Card.Text style={{ fontSize: '30px', textAlign: 'center', margin: "0px" }}>
+                            <Card.Title>Chỉ tiêu tháng này</Card.Title>
+                            <Card.Text>
                                 12
                             </Card.Text>
-                            <Card.Img src={chartImage} alt="Card image cap" style={{ width: "130px", marginLeft: "150px" }} />
+                            <Card.Img src={chartImage} alt="Card image cap" />
                         </Card.Body>
 
                     </Card>
-                    <Card className="card-3" style={{ width: '18rem', height: "14rem" }}>
+                    <Card className="card-3">
 
                         <Card.Body>
-                            <Card.Title style={{ textAlign: 'center' }}>Chỉ tiêu tháng tới</Card.Title>
-                            <Card.Text style={{ fontSize: '30px', textAlign: 'center', margin: "0px" }}>
+                            <Card.Title>Chỉ tiêu tháng tới</Card.Title>
+                            <Card.Text>
                                 15
                             </Card.Text>
-                            <Card.Img src={humanImage} alt="Card image cap" style={{ width: "130px", marginLeft: "150px", height: "130px" }} />
+                            <Card.Img src={humanImage} alt="Card image cap" />
 
                         </Card.Body>
                     </Card>
@@ -86,9 +84,6 @@ const Home = () => {
                     </div>
 
                 </div>
-
-
-
             </div>
         </div>
     )
