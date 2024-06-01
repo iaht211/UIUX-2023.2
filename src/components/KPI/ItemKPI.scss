@@ -1,13 +1,24 @@
+$mobile-width: 480;
+
+
+@mixin mobile {
+    @media (max-width: #{$mobile-width - 1px}) {
+        @content;
+    }
+}
+
+
 .content-1 {
     display: flex;
-    margin-left: 95px;
-    padding: 10px 20px 10px 0px;
+    // margin-left: 95px;
+    // padding: 10px 20px 10px 0px;
     border-radius: 14px;
     background: #F4F3FF;
     margin-top: 50px;
-    margin-right: 70px;
     justify-content: center;
     cursor: pointer;
+
+
 
     .left-content-1 {
         display: flex;
@@ -16,14 +27,20 @@
         justify-content: center;
         margin-left: -202px;
 
+
+
         .header {
             font-weight: bold;
 
+
         }
+
 
         .time {
             display: flex;
             gap: 200px;
+
+
 
             .start {}
 
@@ -34,9 +51,12 @@
     .right-content-1 {
         display: flex;
 
+
+
         .chart {
-            // width: 120px;
             margin-right: 60px;
+
+
 
             .MuiGauge-root {
                 width: 120px;
@@ -45,18 +65,8 @@
 
         .edit-delete-button {
             display: flex;
-            // margin-left: 100px;
 
-            .edit-button-kpi {
-                background-color: #F4F3FF;
-                border: none;
-                margin-right: 7px;
-            }
 
-            .delete-button-kpi {
-                border: none;
-                background-color: #F4F3FF;
-            }
 
             .navigate-button-kpi {
                 display: inline-flex;
@@ -79,4 +89,104 @@
         }
     }
 
+}
+
+@include mobile {
+    .content-1 {
+        // display: flex;
+        // margin-left: 95px;
+        // padding: 10px 20px 10px 0px;
+        // border-radius: 14px;
+        // background: #F4F3FF;
+        //margin-top: 50px;
+        // margin-right: 70px;
+        // justify-content: center;
+        // cursor: pointer;
+        // width: 400px;
+
+        // margin-left: 30px;
+
+
+        .left-content-1 {
+            // display: flex;
+            // flex-direction: column;
+            // gap: 10px;
+            // justify-content: center;
+            // margin: 0px;
+            // margin-left: 0px;
+
+
+            .header {
+                font-weight: bold;
+                font-size: small;
+            }
+
+
+            .time {
+                display: flex;
+                gap: 10px;
+                font-size: small;
+
+                .start {}
+
+                .deadline {}
+            }
+        }
+
+        .right-content-1 {
+            display: flex;
+            width: 205px;
+
+
+            .chart {
+                margin: 0px;
+
+                .MuiGauge-root {
+                    width: 83px;
+
+                    svg {
+                        width: 80px;
+                        height: 80px;
+                    }
+                }
+            }
+
+            .edit-delete-button {
+                display: flex;
+
+
+                .edit-button-kpi {
+                    background-color: #F4F3FF;
+                    border: none;
+                    padding: 0px;
+                }
+
+                .delete-button-kpi {
+                    border: none;
+                    background-color: #F4F3FF;
+                    padding: 5px;
+                }
+
+                .navigate-button-kpi {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 20px;
+                    padding: 0;
+                    margin-right: 5px;
+                    border: none;
+                    background-color: transparent;
+                    cursor: pointer;
+
+                    .fa-arrow-right {
+                        font-size: 24px;
+                        color: currentColor;
+                    }
+                }
+
+
+            }
+        }
+
+    }
 }

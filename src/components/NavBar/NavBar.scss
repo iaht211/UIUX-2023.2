@@ -1,3 +1,13 @@
+$mobile-width: 480;
+
+
+@mixin mobile {
+    @media (max-width: #{$mobile-width - 1px}) {
+        @content;
+    }
+}
+
+
 .navbar-container {
     display: flex;
     align-items: center;
