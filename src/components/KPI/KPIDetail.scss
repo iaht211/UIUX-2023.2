@@ -1,7 +1,11 @@
 .kpi-detail-container {
     // display: flex;
     flex-direction: column;
+
     // align-items: center;
+    .back-page-button {
+        cursor: pointer;
+    }
 
     .content-1 {
         display: flex;
