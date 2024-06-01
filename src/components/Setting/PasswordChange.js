@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './PasswordChange.scss';
 import { FaUnlockAlt } from 'react-icons/fa';
 import { toast } from 'react-toastify';
+import { FaArrowLeft } from "react-icons/fa";
 
 const PasswordChange = () => {
   const [currentPassword, setCurrentPassword] = useState('');
@@ -32,6 +33,9 @@ const PasswordChange = () => {
 
   return (
     <div className="password-change-container">
+      <div className='back-page-button' onClick={() => { navigate('/setting') }}>
+        <FaArrowLeft></FaArrowLeft>
+      </div>
       <div className="header">
         <span>ĐỔI MẬT KHẨU</span>
       </div>

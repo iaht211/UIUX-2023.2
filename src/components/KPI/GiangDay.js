@@ -37,12 +37,18 @@ const GiangDay = ({ display, items, setItems, lastId, setDisplay, setLastId, edi
                 <NavBar></NavBar>
             </div>
 
-            <div className="content">
+            <div className="button">
+
                 <button className="add-button" onClick={() => handleAddButton()}>
 
-                    <img style={{ width: 10, height: 10 }} src={plus} />
+                    <img style={{ width: 20, height: 20 }} src={plus} />
 
                 </button>
+
+                <span className="name">Thêm KPI</span>
+            </div>
+
+            <div className="content">
                 <ul>
                     {items.map(item => (
                         <ItemKPI item={item} onRemove={handleRemove} onEdit={handlEditButton} />

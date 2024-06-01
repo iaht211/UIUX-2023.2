@@ -5,8 +5,10 @@ import { Gauge } from '@mui/x-charts/Gauge';
 import React, { useState } from 'react';
 import Item from './Item';
 import plus from '../../assets/plus.svg';
-import { useLocation } from 'react-router-dom';
+import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 import AddTask from '../Task/AddTask';
+import { FaArrowLeft } from "react-icons/fa";
+
 // import Add_task from '../Add_task/Add_task';
 
 const KPIDetail = ({ items, setItems, displayAdd, setDisplayAdd, lastId, setLastId }) => {
@@ -32,8 +34,13 @@ const KPIDetail = ({ items, setItems, displayAdd, setDisplayAdd, lastId, setLast
     //     setShowModal(false);
     // };
 
+    const navigate = useNavigate();
+
     return (
         <div className="kpi-detail-container">
+            <div className='back-page-button' onClick={() => { navigate('/kpi/giangday') }}>
+                <FaArrowLeft></FaArrowLeft>
+            </div>
             <div className='content-1'>
                 <div className="infor-kpi">
                     <div className="header">
