@@ -35,10 +35,10 @@ const ItemKPI = ({ item, onRemove, onEdit }) => {
 
                 <div className="time">
                     <div className="start">
-                        Ngay bat dau {item.start_date}
+                        Ngày bắt đầu {item.start_date}
                     </div>
                     <div className="deadline">
-                        Deadline {item.end_date}
+                        Hạn {item.end_date}
                     </div>
                 </div>
             </div>
