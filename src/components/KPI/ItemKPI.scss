@@ -106,7 +106,10 @@ ul {
                 }
 
                 span {
-                    font-size: 12px;
+                    @include mobile {
+                        font-size: 12px;
+
+                    }
                 }
             }
         }
@@ -137,11 +140,12 @@ ul {
         .edit-delete-button {
             display: flex;
             // margin-left: 100px;
+            justify-content: center;
+            align-items: center;
 
             @include mobile {
                 width: 55px;
-                justify-content: center;
-                align-items: center;
+
             }
 
 
