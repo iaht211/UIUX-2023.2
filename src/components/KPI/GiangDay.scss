@@ -1,10 +1,30 @@
+$mobile-width: 480;
+
+@mixin mobile {
+    @media (max-width: #{$mobile-width - 1px}) {
+        @content;
+    }
+}
+
+
 .giangday-container {
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .button {
         .add-button {
             background-color: #82AAE3;
             border-radius: 50%;
             height: 50px;
             margin-right: 15px;
+
+            @include mobile {
+                margin-bottom: 15px;
+            }
         }
 
         .name {
@@ -12,52 +32,15 @@
         }
     }
 
-    .content {}
 
-    .content-1 {
-        display: flex;
-        margin-left: 95px;
-        padding: 10px 20px 10px 0px;
-        border-radius: 14px;
-        background: #F4F3FF;
-        margin-top: 50px;
-        margin-right: 70px;
-        justify-content: center;
-        cursor: pointer;
 
-        .left-content-1 {
+    .content {
+
+        .pagnination {
             display: flex;
-            flex-direction: column;
-            gap: 10px;
             justify-content: center;
-            margin-left: -202px;
-
-            .header {
-                font-weight: bold;
-
-            }
-
-            .time {
-                display: flex;
-                gap: 200px;
-
-                .start {}
-
-                .deadline {}
-            }
-        }
-
-        .right-content-1 {
-            width: 120px;
-
+            margin: 35px 35px 40px 100px;
         }
 
     }
-
-    .pagnination {
-        display: flex;
-        justify-content: center;
-        margin: 35px 35px 40px 100px;
-    }
-
 }

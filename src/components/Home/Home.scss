@@ -18,6 +18,10 @@ $mobile-width: 480;
 
 
     .home-content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
         .card-class {
             display: flex;
             justify-items: center;
