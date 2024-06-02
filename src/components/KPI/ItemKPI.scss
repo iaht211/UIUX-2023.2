@@ -1,13 +1,3 @@
-$mobile-width: 480;
-
-
-@mixin mobile {
-    @media (max-width: #{$mobile-width - 1px}) {
-        @content;
-    }
-}
-
-
 .content-1 {
     display: flex;
     // margin-left: 95px;
@@ -18,8 +8,6 @@ $mobile-width: 480;
     justify-content: center;
     cursor: pointer;
 
-
-
     .left-content-1 {
         display: flex;
         flex-direction: column;
@@ -27,11 +15,8 @@ $mobile-width: 480;
         justify-content: center;
         margin-left: -202px;
 
-
-
         .header {
             font-weight: bold;
-
 
         }
 
@@ -42,13 +27,42 @@ $mobile-width: 480;
 
 
 
-            .start {}
+            @include mobile {
+                gap: 23px;
+                width: 191px;
+            }
 
-            .deadline {}
+            .start {
+                @include mobile {
+                    display: flex;
+                    width: 171px;
+                    height: 68px;
+                    flex-direction: column;
+                }
+
+                span {
+                    @include mobile {
+                        width: 73px;
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .deadline {
+                @include mobile {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                span {
+                    font-size: 12px;
+                }
+            }
         }
     }
 
     .right-content-1 {
+        width: 120px;
         display: flex;
 
 
@@ -56,17 +70,29 @@ $mobile-width: 480;
         .chart {
             margin-right: 60px;
 
-
-
             .MuiGauge-root {
                 width: 120px;
+
+                @include mobile {
+                    width: 80px;
+                }
             }
         }
 
         .edit-delete-button {
             display: flex;
+            // margin-left: 100px;
 
+            .edit-button-kpi {
+                background-color: #F4F3FF;
+                border: none;
+                margin-right: 7px;
+            }
 
+            .delete-button-kpi {
+                border: none;
+                background-color: #F4F3FF;
+            }
 
             .navigate-button-kpi {
                 display: inline-flex;
