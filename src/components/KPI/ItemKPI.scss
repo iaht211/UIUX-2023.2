@@ -1,39 +1,24 @@
 $mobile-width: 480;
 
+
 @mixin mobile {
     @media (max-width: #{$mobile-width - 1px}) {
         @content;
     }
 }
 
-ul {
-    @include mobile {
-        margin-left: -32px;
-
-    }
-}
-
 
 .content-1 {
     display: flex;
-    margin-left: 95px;
-    padding: 10px 20px 10px 0px;
+    // margin-left: 95px;
+    // padding: 10px 20px 10px 0px;
     border-radius: 14px;
     background: #F4F3FF;
     margin-top: 50px;
-    margin-right: 70px;
     justify-content: center;
     cursor: pointer;
 
-    @include mobile {
-        margin-left: 0px;
-        padding: 0px;
-        margin-top: 0px;
-        margin-right: 0px;
-        width: 414px;
-        padding: 10px 6px 0px 0px;
-        margin-bottom: 15px;
-    }
+
 
     .left-content-1 {
         display: flex;
@@ -42,135 +27,46 @@ ul {
         justify-content: center;
         margin-left: -202px;
 
-        @include mobile {
-            margin-left: 0px;
-            width: 191px;
-        }
+
 
         .header {
             font-weight: bold;
 
-            @include mobile {
-                width: 132px;
-            }
 
-            span {
-                @include mobile {
-                    font-size: 16px;
-
-                }
-            }
         }
 
-        .content {
-            @include mobile {
-                width: 153px;
-            }
-
-            span {
-                @include mobile {
-                    font-size: 12px;
-                }
-            }
-        }
 
         .time {
             display: flex;
             gap: 200px;
 
-            @include mobile {
-                gap: 23px;
-                width: 191px;
-            }
 
-            .start {
-                @include mobile {
-                    display: flex;
-                    width: 171px;
-                    height: 68px;
-                    flex-direction: column;
-                }
 
-                span {
-                    @include mobile {
-                        width: 73px;
-                        font-size: 12px;
-                    }
-                }
-            }
+            .start {}
 
-            .deadline {
-                @include mobile {
-                    display: flex;
-                    flex-direction: column;
-                }
-
-                span {
-                    font-size: 12px;
-                }
-            }
+            .deadline {}
         }
     }
 
     .right-content-1 {
-        width: 120px;
         display: flex;
 
+
+
         .chart {
-            // width: 120px;
             margin-right: 60px;
 
-            @include mobile {
-                margin-right: 0px;
 
-            }
 
             .MuiGauge-root {
                 width: 120px;
-
-                @include mobile {
-                    width: 80px;
-                }
             }
         }
 
         .edit-delete-button {
             display: flex;
-            // margin-left: 100px;
-
-            @include mobile {
-                width: 55px;
-                justify-content: center;
-                align-items: center;
-            }
 
 
-            .edit-button-kpi {
-                background-color: #F4F3FF;
-                border: none;
-                margin-right: 7px;
-                width: 24px;
-                height: 24px;
-
-                @include mobile {
-                    width: 10px;
-                    height: 100%;
-                }
-            }
-
-            .delete-button-kpi {
-                border: none;
-                background-color: #F4F3FF;
-                width: 24px;
-                height: 24px;
-
-                @include mobile {
-                    width: 10px;
-                    height: 100%;
-                    margin-left: -6px;
-                    margin-right: 12px;
-                }
-            }
 
             .navigate-button-kpi {
                 display: inline-flex;
@@ -193,4 +89,104 @@ ul {
         }
     }
 
+}
+
+@include mobile {
+    .content-1 {
+        // display: flex;
+        // margin-left: 95px;
+        // padding: 10px 20px 10px 0px;
+        // border-radius: 14px;
+        // background: #F4F3FF;
+        //margin-top: 50px;
+        // margin-right: 70px;
+        // justify-content: center;
+        // cursor: pointer;
+        // width: 400px;
+
+        // margin-left: 30px;
+
+
+        .left-content-1 {
+            // display: flex;
+            // flex-direction: column;
+            // gap: 10px;
+            // justify-content: center;
+            // margin: 0px;
+            // margin-left: 0px;
+
+
+            .header {
+                font-weight: bold;
+                font-size: small;
+            }
+
+
+            .time {
+                display: flex;
+                gap: 10px;
+                font-size: small;
+
+                .start {}
+
+                .deadline {}
+            }
+        }
+
+        .right-content-1 {
+            display: flex;
+            width: 205px;
+
+
+            .chart {
+                margin: 0px;
+
+                .MuiGauge-root {
+                    width: 83px;
+
+                    svg {
+                        width: 80px;
+                        height: 80px;
+                    }
+                }
+            }
+
+            .edit-delete-button {
+                display: flex;
+
+
+                .edit-button-kpi {
+                    background-color: #F4F3FF;
+                    border: none;
+                    padding: 0px;
+                }
+
+                .delete-button-kpi {
+                    border: none;
+                    background-color: #F4F3FF;
+                    padding: 5px;
+                }
+
+                .navigate-button-kpi {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 20px;
+                    padding: 0;
+                    margin-right: 5px;
+                    border: none;
+                    background-color: transparent;
+                    cursor: pointer;
+
+                    .fa-arrow-right {
+                        font-size: 24px;
+                        color: currentColor;
+                    }
+                }
+
+
+            }
+        }
+
+    }
 }

@@ -1,5 +1,6 @@
 $mobile-width: 480;
 
+
 @mixin mobile {
     @media (max-width: #{$mobile-width - 1px}) {
         @content;
@@ -12,9 +13,9 @@ $mobile-width: 480;
     display: flex;
     height: 100vh;
 
-    @include mobile {
-        flex-direction: column;
-    }
+    // @include mobile {
+    //     flex-direction: column;
+    // }
 
     .left-container {
         width: 100%;

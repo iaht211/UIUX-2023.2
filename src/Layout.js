@@ -17,10 +17,10 @@ import SettingNotify from "./components/Setting/SettingNotify";
 import GiangDay from "./components/KPI/GiangDay";
 import KPIDetail from "./components/KPI/KPIDetail";
 import CalendarMain from "./components/Calender/Calender"
-import GiangDayAddKPI from "./components/KPI/GiangDayAddKPI";
 import PasswordChange from "./components/Setting/PasswordChange";
 import ProfileChange from "./components/Setting/ProfileChange";
 import TaskManage from "./components/Task/TaskManage";
+import GiangDayAddKPI from "./components/KPI/GiangDayAddKPI";
 
 const Layout = () => {
     return (
