@@ -44,7 +44,16 @@ $mobile-width: 480;
 
             .start {}
 
-            .deadline {}
+            .deadline {
+                @include mobile {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                span {
+                    font-size: 12px;
+                }
+            }
         }
     }
 
@@ -65,8 +74,41 @@ $mobile-width: 480;
 
         .edit-delete-button {
             display: flex;
+            // margin-left: 100px;
+
+            @include mobile {
+                width: 55px;
+                justify-content: center;
+                align-items: center;
+            }
 
 
+            .edit-button-kpi {
+                background-color: #F4F3FF;
+                border: none;
+                margin-right: 7px;
+                width: 24px;
+                height: 24px;
+
+                @include mobile {
+                    width: 10px;
+                    height: 100%;
+                }
+            }
+
+            .delete-button-kpi {
+                border: none;
+                background-color: #F4F3FF;
+                width: 24px;
+                height: 24px;
+
+                @include mobile {
+                    width: 10px;
+                    height: 100%;
+                    margin-left: -6px;
+                    margin-right: 12px;
+                }
+            }
 
             .navigate-button-kpi {
                 display: inline-flex;
