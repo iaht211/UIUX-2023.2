@@ -4,9 +4,10 @@
 
     .react-calendar {
         width: 100% !important; // Override default max-width
-        height: 300px;
+        height: 300px !important;
         border-radius: 5px;
         margin-left: 45px;
+        background-color: #F4F8FD;
     }
 
     p {
@@ -17,6 +18,7 @@
         padding: 10px;
         display: inline-block;
         margin-top: 20px;
+        background-color: #F4F8FD;
     }
 
     .bold {
