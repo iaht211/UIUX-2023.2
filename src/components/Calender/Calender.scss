@@ -1,19 +1,33 @@
 /* Calender.scss */
 .fc .fc-toolbar-title {
-    font-size: 24px; /* Adjust the size of the title if needed */
+  font-size: 24px;
+  /* Adjust the size of the title if needed */
+}
+
+.fc .fc-button {
+  background-color: #D9E5F7 !important;
+  color: rgb(0, 0, 0) !important;
+  border: none !important;
+  border-radius: 4px !important;
+  /* Adjust the border radius if needed */
+  padding: 5px 10px !important;
+  /* Adjust the padding if needed */
+  transition: background-color 0.3s;
+}
+
+.fc .fc-button:hover {
+  background-color: #1b74f9 !important;
+  /* Change the background color on hover if desired */
+  color: #000000 !important;
+}
+
+
+$mobile-width: 480;
+
+@mixin mobile {
+  @media (max-width: #{$mobile-width - 1px}) {
+    @content;
   }
-  
-  .fc .fc-button {
-    background-color: #D9E5F7 !important;
-    color: rgb(0, 0, 0) !important;
-    border: none !important;
-    border-radius: 4px !important; /* Adjust the border radius if needed */
-    padding: 5px 10px !important; /* Adjust the padding if needed */
-    transition: background-color 0.3s;
-  }
-  
-  .fc .fc-button:hover {
-    background-color: #1b74f9 !important; /* Change the background color on hover if desired */
-    color: #000000 !important;
-  }
-  
+}
+
+@include mobile() {}
