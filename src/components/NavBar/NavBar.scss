@@ -1,116 +1,105 @@
-$mobile-width: 480px;
+$mobile-width: 480;
 
 @mixin mobile {
-    @media (max-width: #{$mobile-width}) {
+    @media (max-width: #{$mobile-width - 1px}) {
         @content;
     }
 }
 
-.navbar-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
 
-    .search {
-        display: flex;
-        align-items: center;
-        background-color: #D9E5F7;
-        width: 600px;
-        height: 50px;
-        border-radius: 25px;
-        opacity: 0.8;
-        padding-left: 50px;
-
-        .search-logo {
-            margin-right: 10px;
-        }
-
-        .input-text {
-            width: 100%;
-
-            input {
-                width: 100%;
-                border: none;
-                outline: none;
-                background: transparent;
-                color: #000000;
-                font-family: 'Poppins', sans-serif;
-                font-size: 16px;
-                height: 100%;
-
-                &::placeholder {
-                    color: #000000;
-                    opacity: 1;
-                }
-            }
-        }
-    }
-
-    .notifi-profile {
-        display: flex;
-        align-items: center;
-
-        .notifi {
-            margin-right: 20px;
-        }
-
-        .profile {
-            display: flex;
-            align-items: center;
-
-            .profile-text {
-                color: rgba(35, 70, 229, 0.56);
-                font-family: 'Poppins', sans-serif;
-                font-size: 15px;
-                font-weight: 500;
-                margin-right: 10px;
-                text-align: right;
-            }
-
-            .avatar {
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                overflow: hidden;
-                background-color: #89ACD6;
-            }
-        }
-    }
+.navbar-content {
+    width: 100%;
 
     @include mobile {
-        flex-direction: column;
-        align-items: flex-start;
+        margin-bottom: 20px;
+        height: 30px;
+    }
+
+    .navbar-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        width: 100%;
+
+        @include mobile {
+            width: 414px;
+            padding: 0px;
+        }
 
         .search {
-            width: 100%;
-            height: 40px;
-            padding-left: 10px;
+            display: flex;
+            align-items: center;
+            background-color: #D9E5F7;
+            width: 600px;
+            /* Increased width */
+            height: 50px;
+            /* Increased height */
+            border-radius: 25px;
+            /* Rounded corners */
+            opacity: 0.8;
+            /* Slightly increased opacity */
+            padding: 0 20px;
+
+            @include mobile {
+                height: 30px;
+            }
 
             .input-text {
+                margin-left: 10px;
+                width: 100%;
+
                 input {
-                    font-size: 14px;
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    background: transparent;
+                    color: #000000;
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 16px;
+                    /* Increased font size */
+                    height: 100%;
+                    /* Make input height match the container */
+
+                    &::placeholder {
+                        color: #000000;
+                        opacity: 1;
+                    }
                 }
+            }
+
+            .search-logo {
+                margin-right: 10px;
             }
         }
 
         .notifi-profile {
-            margin-top: 10px;
-            width: 100%;
-            justify-content: space-between;
-
-            .notifi {
-                margin-right: 0;
-            }
+            display: flex;
+            align-items: center;
 
             .profile {
+                display: flex;
+                align-items: center;
+                background-color: #D9E5F7;
+                border-radius: 25px;
+                /* Match the rounded corners */
+                padding: 0 10px;
+
                 .profile-text {
-                    font-size: 13px;
+                    color: #2342E5;
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 14px;
+                    font-weight: 500;
+                    margin-right: 10px;
+                    text-align: right;
                 }
 
                 .avatar {
                     width: 40px;
                     height: 40px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    background-color: #89ACD6;
                 }
             }
         }
