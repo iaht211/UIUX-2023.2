@@ -20,8 +20,6 @@ import { FaChartBar } from "react-icons/fa";
 import { IoMdSettings } from "react-icons/io";
 
 
-
-
 const SideBar = (props) => {
     const { collapsed, toggled, handleToggleSidebar } = props;
     const location = useLocation();

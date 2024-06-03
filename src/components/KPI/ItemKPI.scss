@@ -1,12 +1,10 @@
-$mobile-width: 480;
-
+$mobile-width: 480px;
 
 @mixin mobile {
-    @media (max-width: #{$mobile-width - 1px}) {
+    @media (max-width: #{$mobile-width}) {
         @content;
     }
 }
-
 
 .content-1 {
     display: flex;
@@ -25,7 +23,6 @@ $mobile-width: 480;
         justify-content: center;
         margin-left: -202px;
 
-
         .header {
             font-weight: bold;
 
@@ -36,7 +33,28 @@ $mobile-width: 480;
             gap: 200px;
 
 
-            .start {}
+
+
+            @include mobile {
+                gap: 23px;
+                width: 191px;
+            }
+
+            .start {
+                @include mobile {
+                    display: flex;
+                    width: 171px;
+                    height: 68px;
+                    flex-direction: column;
+                }
+
+                span {
+                    @include mobile {
+                        width: 73px;
+                        font-size: 12px;
+                    }
+                }
+            }
 
             .deadline {
                 @include mobile {
@@ -52,6 +70,7 @@ $mobile-width: 480;
     }
 
     .right-content-1 {
+        width: 120px;
         display: flex;
 
 
@@ -61,6 +80,10 @@ $mobile-width: 480;
 
             .MuiGauge-root {
                 width: 120px;
+
+                @include mobile {
+                    width: 80px;
+                }
             }
         }
 
