@@ -18,8 +18,6 @@ $mobile-width: 480;
     justify-content: center;
     cursor: pointer;
 
-
-
     .left-content-1 {
         display: flex;
         flex-direction: column;
@@ -28,18 +26,14 @@ $mobile-width: 480;
         margin-left: -202px;
 
 
-
         .header {
             font-weight: bold;
 
-
         }
-
 
         .time {
             display: flex;
             gap: 200px;
-
 
 
             .start {}
@@ -65,8 +59,6 @@ $mobile-width: 480;
         .chart {
             margin-right: 60px;
 
-
-
             .MuiGauge-root {
                 width: 120px;
             }
@@ -76,38 +68,15 @@ $mobile-width: 480;
             display: flex;
             // margin-left: 100px;
 
-            @include mobile {
-                width: 55px;
-                justify-content: center;
-                align-items: center;
-            }
-
-
             .edit-button-kpi {
                 background-color: #F4F3FF;
                 border: none;
                 margin-right: 7px;
-                width: 24px;
-                height: 24px;
-
-                @include mobile {
-                    width: 10px;
-                    height: 100%;
-                }
             }
 
             .delete-button-kpi {
                 border: none;
                 background-color: #F4F3FF;
-                width: 24px;
-                height: 24px;
-
-                @include mobile {
-                    width: 10px;
-                    height: 100%;
-                    margin-left: -6px;
-                    margin-right: 12px;
-                }
             }
 
             .navigate-button-kpi {
