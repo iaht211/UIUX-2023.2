@@ -32,6 +32,7 @@ const ItemKPI = ({ item, onRemove, onEdit }) => {
                 <div className="content">
                     <span>{item.description}</span>
                 </div>
+
                 <div className="time">
                     <div className="start">
                         <span>Ngày bắt đầu</span>
@@ -42,9 +43,7 @@ const ItemKPI = ({ item, onRemove, onEdit }) => {
                         <span>{item.end_date}</span>
                     </div>
                 </div>
-
             </div>
-
 
             <div className="right-content-1">
                 <div className='chart'>
@@ -61,10 +60,10 @@ const ItemKPI = ({ item, onRemove, onEdit }) => {
 
                 <div className='edit-delete-button'>
                     <button className='edit-button-kpi'>
-                        <img style={{ width: 20, height: 20, padding: 0 }} src={edit_task_kpi} onClick={() => onEdit(item.id)} />
+                        <img src={edit_task_kpi} onClick={() => onEdit(item.id)} />
                     </button>
                     <button className='delete-button-kpi' onClick={() => onRemove(item.id)}>
-                        <img style={{ width: 20, height: 20, padding: 0 }} src={delete_task_kpi} />
+                        <img src={delete_task_kpi} />
                     </button>
                     <button className='navigate-button-kpi' onClick={handleClick} style={{ color: 'black' }}>
                         <FaArrowRight />
