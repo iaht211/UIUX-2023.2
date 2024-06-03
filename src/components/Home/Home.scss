@@ -2,6 +2,165 @@
     padding: 30px;
 
 
+    .home-content {
+        .card-class {
+            display: flex;
+            justify-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+
+            @include mobile {
+                width: 414px;
+                gap: 9px;
+                height: 100px;
+                width: 100%;
+            }
+
+            .card-1 {
+                background-color: #0BF4C8;
+
+                width: 18 rem;
+                height: 14 rem;
+
+
+                @include mobile {
+                    width: 130px;
+                    height: 100px;
+
+                }
+
+                .card-body {
+                    height: 100%;
+
+                    .card-title {
+                        text-align: center;
+
+                        @include mobile {
+                            font-size: 9px;
+                        }
+                    }
+
+                    .card-text {
+                        font-size: 30px;
+                        text-align: center;
+                        margin: 0px;
+
+                        @include mobile {
+                            font-size: 10px;
+
+                        }
+                    }
+
+                    .card-img {
+                        width: 130px;
+                        height: 150px;
+                        margin-left: 150px;
+
+                        @include mobile {
+                            width: 33px;
+                            height: 33px;
+                            margin-left: 77px;
+                        }
+                    }
+                }
+
+            }
+
+            .card-2 {
+                width: 18 rem;
+                height: 14 rem;
+                background-color: #C8EE2F;
+
+                @include mobile {
+                    width: 130px;
+                    height: 100px;
+
+                }
+
+                .card-body {
+                    height: 100%;
+
+                    .card-title {
+                        text-align: center;
+
+                        @include mobile {
+                            font-size: 9px;
+                        }
+                    }
+
+                    .card-text {
+                        font-size: 30px;
+                        text-align: center;
+                        margin: 0px;
+
+                        @include mobile {
+                            font-size: 10px;
+
+                        }
+                    }
+
+                    .card-img {
+                        width: 130px;
+                        height: 150px;
+                        margin-left: 150px;
+
+                        @include mobile {
+                            width: 33px;
+                            height: 33px;
+                            margin-left: 77px;
+                        }
+                    }
+                }
+            }
+
+            .card-3 {
+                width: 18 rem;
+                height: 14 rem;
+                background-color: #F2A0FF;
+
+                @include mobile {
+                    width: 130px;
+                    height: 100px;
+
+                }
+
+                .card-body {
+                    height: 100%;
+
+                    .card-title {
+                        text-align: center;
+
+                        @include mobile {
+                            font-size: 9px;
+                        }
+                    }
+
+                    .card-text {
+                        font-size: 30px;
+                        text-align: center;
+                        margin: 0px;
+
+                        @include mobile {
+                            font-size: 10px;
+
+                        }
+                    }
+
+                    .card-img {
+                        width: 130px;
+                        height: 150px;
+                        margin-left: 150px;
+
+                        @include mobile {
+                            width: 33px;
+                            height: 33px;
+                            margin-left: 77px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     .kpi-section {
         display: flex;
