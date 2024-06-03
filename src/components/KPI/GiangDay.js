@@ -12,12 +12,9 @@ const GiangDay = ({ display, items, setItems, lastId, setDisplay, setLastId, edi
         setItems(items.filter(item => item.id !== id));
     };
 
-
     const handleAddButton = () => {
         setDisplay(true);
     };
-
-
 
     const handlEditButton = (id) => {
         setEditDisplay(true);
@@ -29,22 +26,15 @@ const GiangDay = ({ display, items, setItems, lastId, setDisplay, setLastId, edi
         console.log(">>> check id", id);
     };
 
-
-
     return (
         <div className="giangday-container">
             <div className="navbar-container">
                 <NavBar></NavBar>
             </div>
-
             <div className="button">
-
                 <button className="add-button" onClick={() => handleAddButton()}>
-
                     <img style={{ width: 20, height: 20 }} src={plus} />
-
                 </button>
-
                 <span className="name">Thêm KPI</span>
             </div>
 

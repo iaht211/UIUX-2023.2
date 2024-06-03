@@ -5,7 +5,7 @@ import "chart.js/auto";
 
 const BarChart = ({ chartData }) => {
     return (
-        <div className="chart-container">
+        <div className="chart-container" style={{ width: '583px', height: '400px', border: '1px solid #A8A8A8', borderRadius: '5px', backgroundColor: '#F4F8FD', padding: "20px" }}>
             <h2 style={{ textAlign: "center" }}>Thống kê KPI giảng dạy</h2>
             <Bar
                 data={chartData}
