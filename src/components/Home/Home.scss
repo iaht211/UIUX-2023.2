@@ -10,7 +10,8 @@
           }
           .note-container {
               border: 1px solid;
-              width: 400px
+              width: 400px;
+            padding: 20px;
           }
       }
       .chart-calender {
@@ -18,7 +19,7 @@
           width: 100%;
           gap: 50px;
           .chart-container {
-  
+            border: 1px solid
           }
           .calendar-container {
   
