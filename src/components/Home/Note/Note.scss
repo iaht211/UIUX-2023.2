@@ -1,0 +1,17 @@
+.note-container {
+
+    .add-note {
+        display: flex;
+        justify-content: center;
+        svg {
+            margin-top: 4px;
+        }
+        span {
+            margin-left: 10px;
+        }
+    }
+
+    .ant-checkbox-group {
+        column-gap: 80px
+    }
+}
