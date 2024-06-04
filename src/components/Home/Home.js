@@ -5,7 +5,6 @@ import BarChart from "./Data/BarChart";  // Adjust the import path as needed
 import MyCalendar from "./Calender/Calender";
 import ChartWeek from "../Chart/ChartWeek";
 import Note from "./Note/Note";
-import Advertis from "./Advertis/Advertis";
 
 
 
@@ -75,10 +74,8 @@ const Home = () => {
 
     return (
         <div className='home-container'>
-            <div className="advertis-note">
-                <div className="advertis">
-                    <Advertis/>
-                </div>
+            <div className="chart-note">
+                <div className="test"></div>
                 <Note/>
             </div>
             <div className="chart-calender">
