@@ -1,17 +1,29 @@
 .home-container {
     width: 100%;
-      .chart-note {
+      .advertis-note {
           display: flex;
           gap: 50px;
-          .test {
+          .advertis {
               width: 600px;
               height: 200px;
-              border: 1px solid
+              border: 1px solid #A8A8A8;
+              border-radius: 8px;
+              margin: 30px 0;
+                display: flex;
+                background-color: #3498db;
+            
+                .kpi {
+                    width: 200px;
+                    height: 200px;
+                }
+        
           }
           .note-container {
-              border: 1px solid;
+              border: 1px solid #A8A8A8;
               width: 400px;
             padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
           }
       }
       .chart-calender {
