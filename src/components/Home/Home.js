@@ -1,17 +1,11 @@
 import React, { useState } from "react";
 import 'react-pro-sidebar/dist/css/styles.css';
-import {
-    Card,
-    Container,
-    Col,
-} from "react-bootstrap";
 import './Home.scss'
 import BarChart from "./Data/BarChart";  // Adjust the import path as needed
-import { FcBusiness } from "react-icons/fc";
 import MyCalendar from "./Calender/Calender";
-import bookImage from "../../assets/education_img.png"
-import chartImage from "../../assets/Remove-bg 1.png"
-import humanImage from "../../assets/Rectangle 126.png"
+import ChartWeek from "../Chart/ChartWeek";
+import Note from "./Note/Note";
+
 
 
 const Home = () => {
@@ -32,63 +26,61 @@ const Home = () => {
             }
         ],
     });
+    const [chartWeekData, setChartWeekData] = useState({
+        labels: ["Đã hoàn thành", "Chưa hoàn thành", "Đã quá hạn"],
+        datasets: [
+            {
+                label: "Users Gained",
+                data: [100, 150, 200], // Replace with your actual user data
+                backgroundColor: [
+                    "#4A3AFF",
+                    "#C893FD",
+                    "#C6D2FD",
+                ],
+                borderColor: [
+                    "#4A3AFF",
+                    "#C893FD",
+                    "#C6D2FD",
+                ],
+                borderWidth: 1,
+            },
+        ],
+    });
+    const chartMonth = {
+        labels: [
+            "Project A",
+            "Project B",
+            "Project C",
+            "Project D"
+        ],
+        datasets: [
+            {
+                label: "Đã hoàn thành",
+                data: [10, 20, 30, 40],
+                backgroundColor: "#4A3AFF"
+            },
+            {
+                label: "Chưa hoàn thành",
+                data: [15, 25, 35, 45],
+                backgroundColor: "#C893FD"
+            },
+            {
+                label: "Đã quá hạn",
+                data: [20, 30, 40, 50],
+                backgroundColor: "#C6D2FD"
+            }
+        ]
+    };
 
     return (
         <div className='home-container'>
-
-            <div className='home-content'>
-                <div className='card-class'>
-                    <Card className="card-1" style={{ width: '18rem', height: "14rem" }}>
-                        <Card.Body>
-                            <Card.Title style={{ textAlign: 'center' }}>Tổng chỉ tiêu tháng này</Card.Title>
-                            <Card.Text style={{ fontSize: '30px', textAlign: 'center', margin: "0px" }}>
-                                145
-                            </Card.Text>
-                            <Card.Img src={bookImage} alt="Card image cap" style={{ width: "130px", marginLeft: "150px" }} />
-
-                        </Card.Body>
-                    </Card>
-                    <Card className="card-2" style={{ width: '18rem', height: "14rem" }}>
-
-                        <Card.Body>
-                            <Card.Title style={{ textAlign: 'center' }}>Chỉ tiêu tháng này</Card.Title>
-                            <Card.Text style={{ fontSize: '30px', textAlign: 'center', margin: "0px" }}>
-                                12
-                            </Card.Text>
-                            <Card.Img src={chartImage} alt="Card image cap" style={{ width: "130px", marginLeft: "150px" }} />
-                        </Card.Body>
-
-                    </Card>
-                    <Card className="card-3" style={{ width: '18rem', height: "14rem" }}>
-
-                        <Card.Body>
-                            <Card.Title style={{ textAlign: 'center' }}>Chỉ tiêu tháng tới</Card.Title>
-                            <Card.Text style={{ fontSize: '30px', textAlign: 'center', margin: "0px" }}>
-                                15
-                            </Card.Text>
-                            <Card.Img src={humanImage} alt="Card image cap" style={{ width: "130px", marginLeft: "150px", height: "130px" }} />
-
-                        </Card.Body>
-                    </Card>
-                </div>
-
-                <div className="kpi-section">
-                    <div className="chart-calender-project">
-                        <div className="chart-calender">
-                            <div className="chart-main">
-                                <BarChart chartData={chartData} />
-                            </div>
-                            <div className='calendar-section'>
-                                <MyCalendar />
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
+            <div className="chart-note">
+                <div className="test"></div>
+                <Note/>
+            </div>
+            <div className="chart-calender">
+                <BarChart chartData={chartData} />
+                <MyCalendar/>
             </div>
         </div>
     )

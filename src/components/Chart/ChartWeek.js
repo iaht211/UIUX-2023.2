@@ -4,7 +4,7 @@ import "chart.js/auto";
 
 const ChartWeek = ({ chartData }) => {
     return (
-        <div className="chart-container">
+        <div className="chart-week">
             <h2 style={{ textAlign: "center" }}>Thống kê tuần này</h2>
             <Pie
                 data={chartData}
