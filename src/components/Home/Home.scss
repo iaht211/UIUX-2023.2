@@ -3,14 +3,55 @@
       .chart-note {
           display: flex;
           gap: 50px;
-          .test {
+          .header {
               width: 600px;
               height: 200px;
-              border: 1px solid
+              border: 1px solid;
+              border-radius: 5px;
+              display: flex;
+              margin: 30px 0 30px 50px;
+              background-color: #204876;
+              .header-content {
+                margin-left: 20px;
+                  h4 {
+                      margin-top: 20px;
+                      
+                  }
+                  span {
+
+                  }
+                  .statistical {
+                    display: flex;
+                    margin-top: 20px;
+                    .left {
+                      border: 1px solid;
+                      border-radius: 5px;
+                      width: 140px;
+                      margin-right: 50px;
+                      span:nth-child(2) {
+                        display: flex;
+                        justify-content: center;
+                      }
+                    }
+                    .right {
+                      border: 1px solid;
+                      border-radius: 5px;
+                      width: 140px;
+                      margin-right: 60px;
+                      span:nth-child(2) {
+                        display: flex;
+                        justify-content: center;
+                      }
+                    }
+                  }
+              }
           }
           .note-container {
               border: 1px solid;
+              border-radius: 5px;
+               margin: 30px 0;
               width: 400px;
+              height: 200px;
             padding: 20px;
           }
       }
@@ -19,7 +60,8 @@
           width: 100%;
           gap: 50px;
           .chart-container {
-            border: 1px solid
+            border: 1px solid;
+            margin-left: 50px
           }
           .calendar-container {
   
