@@ -5,7 +5,7 @@ import BarChart from "./Data/BarChart";  // Adjust the import path as needed
 import MyCalendar from "./Calender/Calender";
 import ChartWeek from "../Chart/ChartWeek";
 import Note from "./Note/Note";
-
+import kpiImg from '../../assets/Remove-bg 1.png'
 
 
 const Home = () => {
@@ -75,7 +75,24 @@ const Home = () => {
     return (
         <div className='home-container'>
             <div className="chart-note">
-                <div className="test"></div>
+                <div className="header">
+                    <img src={kpiImg} alt="" width="200" height="200"/>
+                    <div className="header-content">
+                        <h4>Chào mừng đến với KPInit</h4>
+                        <span>Cùng nhau hoàn thành công việc nhé</span>
+                        <div className="statistical">
+                            <div className="left">
+                                <span>số lượng nhiệm vụ hôm nay<br></br></span>
+                                <span>12</span>
+
+                            </div>
+                            <div className="right">
+                                <span>tổng số nhiệm vụ <br/><br/></span>
+                                <span>12</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <Note/>
             </div>
             <div className="chart-calender">
