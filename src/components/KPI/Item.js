@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Item.scss';
-import mu_tot_nghiep from '../../assets/mu-tot-nghiep.svg';
+import star from '../../assets/star.svg';
+import starfilled from '../../assets/starfilled.svg'; //  yellow star icon
 import date_icon from '../../assets/date-icon.svg';
 import edit_task_kpi from '../../assets/edit_task_kpi.svg';
 import delete_task_kpi from '../../assets/delete_task_kpi.svg';
 
 const Item = ({ item, onRemove }) => {
+    const [isStarred, setIsStarred] = useState(false);
+
+    const handleStarClick = () => {
+        setIsStarred(!isStarred);
+    };
+
     let classNameBoxShadow = '';
     if (item.id === 1) {
         classNameBoxShadow = 'highlight-on-time-box';
@@ -14,19 +21,23 @@ const Item = ({ item, onRemove }) => {
     } else if (item.id === 3) {
         classNameBoxShadow = 'highlight-on-late-box';
     } else {
-        classNameBoxShadow = 'highlight-on-doing-box'
+        classNameBoxShadow = 'highlight-on-doing-box';
     }
 
     return (
         <div className={classNameBoxShadow}>
-            <div className='icon-mu-tot-nghiep'>
-                <img style={{ width: 24, height: 24 }} src={mu_tot_nghiep} />
+            <div className='icon-star' onClick={handleStarClick}>
+                <img
+                    style={{ width: 24, height: 24, cursor: 'pointer' }}
+                    src={isStarred ? starfilled : star}
+                    alt="star icon"
+                />
             </div>
             <div className='right-task-item'>
                 <div className='name'>{item.name}</div>
                 <div className='date-numbers'>
                     <div className='icon-date'>
-                        <img style={{ width: 14, height: 14 }} src={date_icon} />
+                        <img style={{ width: 14, height: 14 }} src={date_icon} alt="date icon" />
                     </div>
                     <div className='date'>
                         <div className='start-date'>
@@ -49,14 +60,13 @@ const Item = ({ item, onRemove }) => {
 
             <div className='left-task-item'>
                 <button className='edit-button-kpi'>
-                    <img style={{ width: 24, height: 24 }} src={edit_task_kpi} />
+                    <img style={{ width: 24, height: 24 }} src={edit_task_kpi} alt="edit icon" />
                 </button>
                 <button className='delete-button-kpi' onClick={() => onRemove(item.id)}>
-                    <img style={{ width: 24, height: 24 }} src={delete_task_kpi} />
+                    <img style={{ width: 24, height: 24 }} src={delete_task_kpi} alt="delete icon" />
                 </button>
             </div>
         </div>
-
     );
 };
 
