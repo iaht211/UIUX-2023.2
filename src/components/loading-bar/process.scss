@@ -1,0 +1,58 @@
+body {
+    background-color: #2e3537;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .progress-div {
+    position: relative;
+    width: 450px;
+    background-color: #b6b6b6;
+    border-radius: 30px;
+  }
+  
+  .progress-bar {
+    height: 25px;
+    background-color: green;
+    border-radius: 30px;
+    transition: 0.5s linear;
+    transition-property: width, background-color;
+    animation: progress 5s forwards;
+  }
+  
+  @keyframes  progress {
+    from {
+      width: 0%;
+      background-color: red;
+    }
+    to {
+      width: 100%;
+      background-color: green;
+      box-shadow: 0 0 10px green;
+    }
+  }
+  
+  .label {
+    position: absolute;
+    top: 0;
+    left: 45%;
+    font-size: 20px;
+    color: white;
+    font-family: sans-serif;
+  
+    --progress: 0;
+    animation: increment 5s steps(100) forwards;
+    counter-reset: percent var(--progress);
+  }
+  
+  .label:after {
+    content: counter(percent)'%';
+  }
+  
+  @keyframes  increment {
+    100% {
+      --progress: 100;
+    }
+  }

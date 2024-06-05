@@ -5,9 +5,9 @@ import AddTask from "./AddTask";
 const TaskManage = () => {
     const [displayAdd, setDisplayAdd] = useState(false);
     var [items, setItems] = useState([
-        { id: 1, name: 'Write Report', numbers: '20', unit: "bài", start_date: "09/06/2024", end_date: "10/05/2024", description: "fdsfsdfsd" },
-        { id: 2, name: 'Chấm bài về nhà', numbers: '30', unit: "bài", start_date: "09/06/2024", end_date: "10/05/2024", description: "fdsfsdfsd" },
-        { id: 3, name: 'Giảng dạy UI&UX lớp 4321', numbers: '100', unit: 'tiết', start_date: "09/06/2024", end_date: "10/05/2024", description: "fdsfsdfsd" },
+        { id: 1, name: 'Write Report', numbers: '20', unit: "bài", start_date: "09/06/2024", end_date: "10/05/2024", description: "fdsfsdfsd",current_progress: 90, total_progress: 100 },
+        { id: 2, name: 'Chấm bài về nhà', numbers: '30', unit: "bài", start_date: "09/06/2024", end_date: "10/05/2024", description: "fdsfsdfsd",current_progress: 50, total_progress: 100 },
+        { id: 3, name: 'Giảng dạy UI&UX lớp 4321', numbers: '100', unit: 'tiết', start_date: "09/06/2024", end_date: "10/05/2024", description: "fdsfsdfsd",current_progress: 70, total_progress: 100},
     ]);
     // false sẽ hiển thị ra màn AddTask
 
