@@ -20,6 +20,8 @@ const AddTask = ({ items, setItems, displayAdd, setDisplayAdd, lastId, setLastId
       start_date: "09/06/2024",
       end_date: "10/05/2024",
       description: description,
+      current_progress: 0  , 
+      total_progress: 0  
     };
     console.log('Task Added:', add_task);
 
