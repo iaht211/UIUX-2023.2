@@ -255,3 +255,271 @@
         }
     }
 }
+
+$mobile-width: 480;
+
+@mixin mobile {
+    @media (max-width: #{$mobile-width - 1px}) {
+        @content;
+    }
+}
+
+@include mobile(){
+    .highlight-on-time-box {
+        display: flex;
+        align-items: center;
+        margin: 10px 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 20px;
+        background-color: 'white';
+        box-shadow: 1px 1px 4px rgba(15, 209, 134, 0.50);
+        border-radius: 10;
+    
+        .right-task-item {
+            width: 300px;
+    
+            .name {}
+    
+            width: 200px;
+    
+            .date-numbers {
+                display: flex;
+                align-items: center;
+                width: 340px;
+    
+                .icon-date {
+                    margin-right: 11px;
+                }
+    
+                .date {
+    
+                    .start-date {
+                        width: 200px;
+    
+                        .name-date {
+                            margin-right: 20px;
+    
+                        }
+    
+                    }
+    
+                    .end-date {
+                        width: 200px;
+    
+                        .name-date {
+                            margin-right: 20px;
+    
+                        }
+                    }
+                }
+    
+                .numbers {
+                    margin-left: 0px;
+                    color: #3FC2A3;
+                    border-radius: 17px;
+                    font-size: 16px;
+                     width: 55px; 
+                    background-color: #D9F3ED;
+                }
+            }
+        }
+    
+        .icon-mu-tot-nghiep {
+            width: 24px;
+            height: 24px;
+            margin-right: 20px;
+        }
+    
+        .left-task-item {
+    
+            margin-left: 80px;
+    
+            .edit-button-kpi {
+                background-color: white;
+                border: none;
+                margin-right: 7px;
+            }
+    
+            .delete-button-kpi {
+                border: none;
+                background-color: white;
+            }
+        }
+    }
+    
+    .highlight-on-doing-box {
+        display: flex;
+        align-items: center;
+        margin: 10px 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 20px;
+        background-color: 'white';
+        box-shadow: 1px 1px 4px rgb(15 118 209 / 50%);
+        border-radius: 10;
+    
+        .right-task-item {
+            width: 300px;
+    
+            .name {}
+    
+            width: 200px;
+    
+            .date-numbers {
+                display: flex;
+                align-items: center;
+                width: 300px;
+    
+                .icon-date {
+                    margin-right: 11px;
+                }
+    
+                .date {
+    
+                    .start-date {
+                        width: 200px;
+    
+                        .name-date {
+                            margin-right: 20px;
+    
+                        }
+    
+                    }
+    
+                    .end-date {
+                        width: 200px;
+    
+                        .name-date {
+                            margin-right: 20px;
+    
+                        }
+                    }
+                }
+    
+    
+                .numbers {
+                    margin-left: 0px;
+                    color: #147ce2b5;
+                    border-radius: 17px;
+                    font-size: 16px;
+                     width: 55px;
+                    background-color: #cee2f6;
+                }
+    
+            }
+        }
+    
+        .icon-mu-tot-nghiep {
+            width: 24px;
+            height: 24px;
+            margin-right: 20px;
+        }
+    
+        .left-task-item {
+    
+            margin-left: 80px;
+    
+            .edit-button-kpi {
+                background-color: white;
+                border: none;
+                margin-right: 7px;
+            }
+    
+            .delete-button-kpi {
+                border: none;
+                background-color: white;
+            }
+        }
+    }
+    
+    
+    .highlight-on-late-box {
+        display: flex;
+        align-items: center;
+        margin: 10px 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 20px;
+        background-color: 'white';
+        box-shadow: 1px 1px 4px rgb(214 13 13 / 50%);
+        border-radius: 10;
+    
+        .right-task-item {
+            width: 300px;
+    
+            .name {}
+    
+            width: 200px;
+    
+            .date-numbers {
+                display: flex;
+                align-items: center;
+                width: 300px;
+    
+                .icon-date {
+                    margin-right: 11px;
+                }
+    
+                .date {
+    
+                    .start-date {
+                        width: 200px;
+    
+                        .name-date {
+                            margin-right: 20px;
+    
+                        }
+    
+                    }
+    
+                    .end-date {
+                        width: 200px;
+    
+                        .name-date {
+                            margin-right: 20px;
+    
+                        }
+                    }
+    
+                }
+    
+    
+                .numbers {
+                    margin-left: 0px;
+                    color: #c41818cc;
+                    border-radius: 17px;
+                    font-size: 16px;
+                    width: 55px;
+                    background-color: #f3d9d9;
+                }
+    
+            }
+        }
+    
+        .icon-mu-tot-nghiep {
+            width: 24px;
+            height: 24px;
+            margin-right: 20px;
+        }
+    
+        .left-task-item {
+    
+            margin-left: 80px;
+    
+            .edit-button-kpi {
+                background-color: white;
+                border: none;
+                margin-right: 7px;
+            }
+    
+            .delete-button-kpi {
+                border: none;
+                background-color: white;
+            }
+        }
+    }
+}
