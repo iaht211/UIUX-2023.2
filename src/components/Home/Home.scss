@@ -129,6 +129,12 @@ $mobile-width: 480;
     .chart-container {
       border: 1px solid;
       margin-left: 50px;
+      width: 600px;
+      height: 400px;
+      border: 1px solid #A8A8A8;
+      border-radius: 5px;
+      background-color: #F4F8FD;
+      padding: 20px;
 
       @include mobile {
         width: 414px;
