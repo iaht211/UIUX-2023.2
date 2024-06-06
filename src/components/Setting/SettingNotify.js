@@ -56,7 +56,7 @@ const SettingNotify = () => {
                     <div className='setting-description'>
                         <span>Thông báo deadline</span>
                         <React.Fragment>
-                            <ToggleSwitch label="Save" id="toggle4" />
+                            <ToggleSwitch label="Save" id="toggle4"/>
                         </React.Fragment>
                     </div>
                     <div className='separator'></div>

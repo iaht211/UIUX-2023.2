@@ -1,7 +1,7 @@
 import React from "react";
-import "./ToggleSwitch.css";
+import "./ToggleSwitch.scss";
 
-const ToggleSwitch = ({ label, id }) => {
+const ToggleSwitch = ({ label, id, paddingLeft }) => {
     return (
         <div className="container">
             <div className="box-size">
