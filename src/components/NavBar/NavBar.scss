@@ -8,7 +8,8 @@ $mobile-width: 480;
 
 
 .navbar-content {
-    width: 100%;
+    width: 1000px;
+    margin-left: 120px;
 
     @include mobile {
         margin-bottom: 20px;
@@ -20,7 +21,7 @@ $mobile-width: 480;
         align-items: center;
         justify-content: space-between;
         padding: 20px;
-        width: 100%;
+        width: 1000px;
 
         @include mobile {
             width: 414px;
@@ -40,6 +41,7 @@ $mobile-width: 480;
             opacity: 0.8;
             /* Slightly increased opacity */
             padding: 0 20px;
+            margin-left: 40px;
 
             @include mobile {
                 height: 30px;
@@ -76,6 +78,7 @@ $mobile-width: 480;
         .notifi-profile {
             display: flex;
             align-items: center;
+            // margin-left: 175px;
 
             .profile {
                 display: flex;

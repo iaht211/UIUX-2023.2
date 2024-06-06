@@ -106,7 +106,7 @@ ul {
                 }
 
                 span {
-                    font-size: 12px;
+                    // font-size: 12px;
                 }
             }
         }
@@ -135,8 +135,9 @@ ul {
         }
 
         .edit-delete-button {
-            display: flex;
-            // margin-left: 100px;
+            display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
             @include mobile {
                 width: 55px;
@@ -150,7 +151,7 @@ ul {
                 border: none;
                 margin-right: 7px;
                 width: 24px;
-                height: 24px;
+                // height: 24px;
 
                 @include mobile {
                     width: 10px;
@@ -162,7 +163,7 @@ ul {
                 border: none;
                 background-color: #F4F3FF;
                 width: 24px;
-                height: 24px;
+                // height: 24px;
 
                 @include mobile {
                     width: 10px;
@@ -173,13 +174,13 @@ ul {
             }
 
             .navigate-button-kpi {
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
+                // display: inline-flex;
+                // align-items: center;
+                // justify-content: center;
                 width: 40px;
-                padding: 0;
-                margin: 0;
-                border: none;
+                // padding: 0;
+                // margin: 0;
+                // border: none;
                 background-color: transparent;
                 cursor: pointer;
 
