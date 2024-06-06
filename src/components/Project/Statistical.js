@@ -6,7 +6,7 @@ import "./Statustical.scss"
 
 const Project = () => {
     const [chartData, setChartData] = useState({
-        labels: ["Đã hoàn thành", "Chưa hoàn thành", "Đã quá hạn"],
+        labels: ["Đã hoàn thành", "Chưa hoàn thành", "Quá hạn"],
         datasets: [
             {
                 label: "Users Gained",
@@ -44,7 +44,7 @@ const Project = () => {
                 backgroundColor: "#C893FD"
             },
             {
-                label: "Đã quá hạn",
+                label: "Quá hạn",
                 data: [20, 30, 40, 50],
                 backgroundColor: "#C6D2FD"
             }
