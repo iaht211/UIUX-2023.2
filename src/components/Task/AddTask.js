@@ -53,11 +53,18 @@ const AddTask = ({ items, setItems, displayAdd, setDisplayAdd, lastId, setLastId
           onChange={(e) => setTaskName(e.target.value)}
         />
         <div className="input-group">
+        <div>
+                <label>Loại:</label>
+                <select style={{ width: '100%', padding: '10px', marginTop: '2px', fontSize: '18px' }}>
+                    <option value="Mặc định">Mặc định</option>
+                    <option value="Mặc định">Tối thiểu</option>
+                </select>
+            </div>
           <div>
             <label>Số lượng</label>
             <input
               type="number"
-              placeholder="Enter number"
+              placeholder="Nhập số lượng"
               value={quantity}
               onChange={(e) => setQuantity(e.target.value)}
             />
@@ -66,7 +73,7 @@ const AddTask = ({ items, setItems, displayAdd, setDisplayAdd, lastId, setLastId
             <label>Đơn vị</label>
             <input
               type="text"
-              placeholder="Enter unit"
+              placeholder="Nhập đơn vị"
               value={unit}
               onChange={(e) => setUnit(e.target.value)}
             />
@@ -101,7 +108,7 @@ const AddTask = ({ items, setItems, displayAdd, setDisplayAdd, lastId, setLastId
         <div className="description-group">
           <label>Descriptions</label>
           <textarea
-            placeholder="Write something..."
+            placeholder="Thông tin"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           ></textarea>

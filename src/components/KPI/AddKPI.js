@@ -99,7 +99,7 @@ const AddKPI = ({ display, items, setItems, lastId, setDisplay, setLastId, setEd
                         onChange={(date) => handleDate(date)}
                         // showTimeSelect
                         timeFormat="HH:mm"
-                        placeholderText={editDisplay ? "07/04/2024" : "day, month, year"}
+                        placeholderText={editDisplay ? "07/04/2024" : "ngày, tháng, năm"}
                         style={{ padding: '12px', width: '100%', marginTop: '10px', fontSize: '18px' }}
                     />
                 </div>
@@ -108,10 +108,10 @@ const AddKPI = ({ display, items, setItems, lastId, setDisplay, setLastId, setEd
                     <DatePicker
                         selected={endDate}
                         onChange={(date) => setEndDate(date)}
-                        dateFormat="MMMM d, yyyy"
+                        dateFormat="dd/MM/yyyy"
                         // showTimeSelect
                         timeFormat="HH:mm"
-                        placeholderText={editDisplay ? "08/06/2024" : "Month, day, year"}
+                        placeholderText={editDisplay ? "08/06/2024" : "ngày, tháng, năm"}
                         style={{ padding: '12px', width: '100%', marginTop: '10px', fontSize: '18px' }}
                     />
                 </div>
@@ -119,7 +119,7 @@ const AddKPI = ({ display, items, setItems, lastId, setDisplay, setLastId, setEd
             <div style={{ marginBottom: '20px' }}>
                 <label>Descriptions:</label>
                 <textarea
-                    placeholder={editDisplay ? "Giảng dạy môn UI&UX" : "Write something"}
+                    placeholder={editDisplay ? "Giảng dạy môn UI&UX" : "Nhập thông tin"}
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                     style={{ width: '100%', height: '150px', padding: '12px', marginTop: '10px', fontSize: '18px', resize: 'none' }}
