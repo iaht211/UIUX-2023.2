@@ -119,7 +119,7 @@ const AddKPI = ({ display, items, setItems, lastId, setDisplay, setLastId, setEd
             <div style={{ marginBottom: '20px' }}>
                 <label>Descriptions:</label>
                 <textarea
-                    placeholder={editDisplay ? "Giảng dạy môn UI&UX" : "Write something"}
+                    placeholder={editDisplay ? "Giảng dạy môn UI&UX" : "Nhập thông tin"}
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                     style={{ width: '100%', height: '150px', padding: '12px', marginTop: '10px', fontSize: '18px', resize: 'none' }}
