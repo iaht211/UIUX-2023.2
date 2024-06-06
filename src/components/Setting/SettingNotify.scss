@@ -1,212 +1,30 @@
-.setting-container {
-    padding: 50px 20px 20px 150px;
+$mobile-width: 480;
 
-    .header {
-        background-color: #DAE6F7;
-        display: flex;
-        justify-content: center;
-        /* Căn giữa theo chiều ngang */
-        align-items: center;
-        /* Căn giữa theo chiều dọc */
-        /* Đặt chiều cao cho div header nếu cần */
-        height: 50px;
-        width: 800px;
-
-        margin-bottom: 20px;
-
-        span {
-            font-size: 24px;
-        }
-    }
-
-    .dang-xuat {
-        display: flex;
-        align-items: center;
-        margin-bottom: 40px;
-        background-color: #DAE6F7;
-        padding: 20px 20px 20px 20px;
-        border-radius: 10px;
-        width: 800px;
-
-        .profile {
-            display: flex;
-            width: 70px;
-            height: 70px;
-            align-items: center;
-
-            .avatar {
-                width: 70px;
-                height: 70px;
-                border-radius: 50%;
-                background-color: #89ACD6;
-                margin-left: 20px;
-                border-radius: 50%;
-            }
-        }
-
-        .button-dang-xuat {
-            margin-left: 600px;
-
-            .button-dang-xuat-1 {
-                border-radius: 5px;
-                background-color: #DAE6F7;
+@mixin mobile {
+  @media (max-width: #{$mobile-width - 1px}) { // Điều chỉnh media query cho kích thước mobile
+    @content;
+        .setting-container{
+            .notification-settings{
+                width: 100%;
             }
 
-        }
-    }
+            .event-settings{
+                width: 100%;
+            }
 
-    .bao-mat {
-        background-color: #DAE6F7;
-        padding: 20px 20px 30px 20px;
-        border-radius: 10px;
-        width: 800px;
-
-        .box-bao-mat {
-            margin-top: 15px;
-            margin-bottom: 20px;
-        }
-
-        .box-doi-pass {
-            margin-top: 15px;
-            margin-bottom: 20px;
-
-            .box-doi-pass-1 {
-                margin-bottom: 20px;
-
-                .chinh-sua-1 {
-                    margin-left: 552px;
-                    border-radius: 5px;
-                    background-color: #DAE6F7;
-                }
+            .setting-header{
+                width: 100%;
             }
         }
-
-        .box-ho-so {
-            margin-top: 15px;
-            margin-bottom: 20px;
-
-            .box-ho-so-1 {
-                margin-bottom: 20px;
-
-                .chinh-sua-2 {
-                    margin-left: 606px;
-                    border-radius: 5px;
-                    background-color: #DAE6F7;
-                }
-            }
-        }
-
-        .luu-ttdn {
-            .luu-ttdn-main {
-                display: flex;
-                align-items: center;
-                margin-top: 15px;
-                margin-bottom: 20px;
-
-
-                .name-test {}
-            }
-        }
-    }
-
-    .thong-bao {
-        display: flex;
-        align-items: center;
-        margin-top: 40px;
-        background-color: #DAE6F7;
-        padding: 20px 20px 30px 20px;
-        border-radius: 10px;
-        width: 800px;
-
-        .cai-dat {
-            margin-left: 573px;
-            border-radius: 5px;
-            background-color: #DAE6F7;
-        }
-    }
-
-    .bao-mat-1 {
-        margin-bottom: 20px;
-        background-color: #DAE6F7;
-        padding: 20px 20px 30px 20px;
-        border-radius: 10px;
-        width: 800px;
-
-
-
-        .box-bao-mat {
-            margin-top: 15px;
-            margin-bottom: 20px;
-        }
-
-        .box-doi-pass {
-            margin-top: 15px;
-            margin-bottom: 20px;
-
-            .box-doi-pass-1 {
-                margin-bottom: 20px;
-
-                .chinh-sua-1 {
-                    margin-left: 552px;
-                    border-radius: 5px;
-                    background-color: #DAE6F7;
-                }
-            }
-        }
-
-        .box-ho-so {
-            margin-top: 15px;
-            margin-bottom: 20px;
-
-            .box-ho-so-1 {
-                margin-bottom: 20px;
-
-                .chinh-sua-2 {
-                    margin-left: 606px;
-                    border-radius: 5px;
-                    background-color: #DAE6F7;
-                }
-            }
-        }
-
-        .luu-ttdn {
-            .luu-ttdn-main {
-                display: flex;
-                align-items: center;
-                margin-top: 15px;
-                margin-bottom: 20px;
-
-
-                .name-test {}
-            }
-        }
-    }
-
-    .thong-bao {
-        display: flex;
-        align-items: center;
-        margin-top: 40px;
-        background-color: #DAE6F7;
-        padding: 20px 20px 30px 20px;
-        border-radius: 10px;
-        width: 800px;
-
-        .cai-dat {
-            margin-left: 573px;
-            border-radius: 5px;
-            background-color: #DAE6F7;
-        }
-
-    }
- }
-// SettingNotify.scss
+  }
+}
 
 body {
     font-family: Arial, sans-serif; // Thiết lập font chữ chung
 }
 
 .setting-container {
-    padding: 50px 20px 20px 150px;
+    //padding: 50px 20px 20px 150px;
 
     .setting-header {
         background-color: #DAE6F7;
@@ -243,6 +61,7 @@ body {
             display: flex;
             justify-content: space-between;
             align-items: center;
+         
 
             .setting-label {
                 font-family: Arial, sans-serif; // Đảm bảo font chữ nhất quán
@@ -263,3 +82,5 @@ body {
         background-color: #081C15;
     }
 }
+
+@include mobile {} // Kích hoạt mixin mobile

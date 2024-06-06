@@ -1,9 +1,22 @@
+$mobile-width: 480;
+
+@mixin mobile {
+  @media (max-width: #{$mobile-width - 1px}) { // Điều chỉnh media query cho kích thước mobile
+    @content;
+      .profile-container {
+        .info-container {
+          width: 90%;
+        }
+      }
+  }
+}
+
 .profile-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 20px;
-  background-color: #f0f8ff;
+  //padding: 50px 20px;
+  background-color: white;
   min-height: 100vh;
 
   .back-page-button {
@@ -51,11 +64,10 @@
   }
 
   .info-container {
-    background-color: white;
+    background-color: #DAE6F7;
     padding: 20px;
     border-radius: 10px;
-    width: 80%;
-    max-width: 600px;
+    width: 75%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
     .info-row {
@@ -109,3 +121,5 @@
 
   }
 }
+
+@include mobile {} // Kích hoạt mixin mobile

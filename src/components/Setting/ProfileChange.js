@@ -15,11 +15,11 @@ const ProfileChange = () => {
   });
 
   const [profileData, setProfileData] = useState({
-    email: 'long.qc210000@sis.hust.edu.vn',
+    email: 'long@sis.hust.edu.vn',
     dob: '20/02/2003',
     phone: '099.999.1111',
     class: 'CNTT Việt Nhật 03 - K66',
-    institute: 'Công nghệ thông tin và truyền thông',
+    institute: 'SoICT',
     degree: 'Việt Nhật - K66'
   });
 
@@ -90,7 +90,7 @@ const ProfileChange = () => {
           </button>
         </div>
         <div className="info-row">
-          <span className="info-label-edit">SDT</span>
+          <span className="info-label-edit">SĐT</span>
           {isEditing.phone ? (
             <input
               type="text"
@@ -113,7 +113,7 @@ const ProfileChange = () => {
           <span className="info-value">{profileData.class}</span>
         </div>
         <div className="info-row">
-          <span className="info-label">Viện/Khoa/Trường</span>
+          <span className="info-label">Trường</span>
           <span className="info-value">{profileData.institute}</span>
         </div>
         <div className="info-row">

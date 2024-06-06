@@ -1,6 +1,17 @@
+$mobile-width: 480;
+
+@mixin mobile {
+  @media (max-width: #{$mobile-width - 1px}) { // Điều chỉnh media query cho kích thước mobile
+    @content;
+    .container {
+      padding-left: 120px; // Điều chỉnh khoảng cách bên trái cho phù hợp với mobile
+    }
+  }
+}
+
 .container {
   text-align: center;
-  padding-left: 520px;
+  padding-left: 520px; // Thiết lập khoảng cách bên trái cho phù hợp với desktop
 }
 
 .toggle-switch {
@@ -78,3 +89,5 @@
 .checkbox:checked+.label .switch {
   right: 0px;
 }
+
+@include mobile {} // Kích hoạt mixin mobile
