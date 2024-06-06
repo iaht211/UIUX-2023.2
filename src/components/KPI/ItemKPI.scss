@@ -76,7 +76,7 @@ ul {
 
         .time {
             display: flex;
-            gap: 200px;
+            
 
             @include mobile {
                 gap: 23px;
@@ -84,6 +84,7 @@ ul {
             }
 
             .start {
+                margin-right: 160px;
                 @include mobile {
                     display: flex;
                     width: 171px;
@@ -100,6 +101,7 @@ ul {
             }
 
             .deadline {
+                margin-right: 20px;
                 @include mobile {
                     display: flex;
                     flex-direction: column;
@@ -117,8 +119,7 @@ ul {
         display: flex;
 
         .chart {
-            // width: 120px;
-            margin-right: 60px;
+            margin: 0px 40px;
 
             @include mobile {
                 margin-right: 0px;
@@ -131,13 +132,17 @@ ul {
                 @include mobile {
                     width: 80px;
                 }
+
+                .css-1u0jhsc-MuiGauge-container>svg {
+                    margin: 0px;
+                }
             }
         }
 
         .edit-delete-button {
             display: inline-flex;
-    align-items: center;
-    justify-content: center;
+            align-items: center;
+            justify-content: center;
 
             @include mobile {
                 width: 55px;
@@ -148,22 +153,21 @@ ul {
 
             .edit-button-kpi {
                 background-color: #F4F3FF;
-                border: none;
-                margin-right: 7px;
-                width: 24px;
-                // height: 24px;
+                
 
                 @include mobile {
                     width: 10px;
                     height: 100%;
+                }
+
+                img {
+                    width: 30px;
                 }
             }
 
             .delete-button-kpi {
                 border: none;
                 background-color: #F4F3FF;
-                width: 24px;
-                // height: 24px;
 
                 @include mobile {
                     width: 10px;
@@ -171,16 +175,13 @@ ul {
                     margin-left: -6px;
                     margin-right: 12px;
                 }
+                img {
+                    width: 30px;
+                }
             }
 
             .navigate-button-kpi {
-                // display: inline-flex;
-                // align-items: center;
-                // justify-content: center;
                 width: 40px;
-                // padding: 0;
-                // margin: 0;
-                // border: none;
                 background-color: transparent;
                 cursor: pointer;
 
@@ -188,6 +189,7 @@ ul {
                     font-size: 24px;
                     color: currentColor;
                 }
+                
             }
 
 
