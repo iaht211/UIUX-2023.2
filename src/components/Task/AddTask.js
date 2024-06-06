@@ -21,7 +21,7 @@ const AddTask = ({ items, setItems, displayAdd, setDisplayAdd, lastId, setLastId
       end_date: "10/05/2024",
       description: description,
       current_progress: 0  , 
-      total_progress: 0  
+      total_progress: 100  
     };
     console.log('Task Added:', add_task);
 
@@ -81,7 +81,7 @@ const AddTask = ({ items, setItems, displayAdd, setDisplayAdd, lastId, setLastId
               onChange={(date) => handleDate(date)}
               // showTimeSelect
               timeFormat="HH:mm"
-              placeholderText="day, month, year"
+              placeholderText="ngày, tháng, năm"
               style={{ padding: '12px', width: '100%', marginTop: '10px', fontSize: '18px' }}
             />
           </div>
@@ -90,10 +90,10 @@ const AddTask = ({ items, setItems, displayAdd, setDisplayAdd, lastId, setLastId
             <DatePicker
               selected={end_date}
               onChange={(date) => setEndDate(date)}
-              dateFormat="MMMM d, yyyy"
+              dateFormat="dd/MM/yyyy"
               // showTimeSelect
               timeFormat="HH:mm"
-              placeholderText="Month, day, year"
+              placeholderText="ngày, tháng, năm"
               style={{ padding: '12px', width: '100%', marginTop: '10px', fontSize: '18px' }}
             />
           </div>
