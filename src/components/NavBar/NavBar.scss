@@ -9,7 +9,7 @@ $mobile-width: 480;
 
 .navbar-content {
     width: 100%;
-    // background: linear-gradient(to right, white, #a6e0ec);
+    //background: linear-gradient(to right, white, #a6e0ec);
 
     @include mobile {
         margin-bottom: 20px;
@@ -34,12 +34,12 @@ $mobile-width: 480;
             display: flex;
             align-items: center;
             background-color: #D9E5F7;
-            width: 600px;
+            width: 200px;
             height: 36px;
             border-radius: 25px;
             opacity: 0.8;
             padding: 0 20px;
-            margin-left: 110px;
+            margin-left: 0px;
 
             @include mobile {
                 height: 30px;
@@ -82,10 +82,11 @@ $mobile-width: 480;
             .profile {
                 display: flex;
                 align-items: center;
-                background-color: #D9E5F7;
+               // background-color: #D9E5F7;
                 border-radius: 25px;
                 /* Match the rounded corners */
-                padding: 0 10px;
+                padding: 0px 60px 0px 0px;
+                margin-left: 5px;
 
                 .profile-text {
                     color: #2342E5;
