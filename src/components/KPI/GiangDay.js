@@ -12,12 +12,9 @@ const GiangDay = ({ display, items, setItems, lastId, setDisplay, setLastId, edi
         setItems(items.filter(item => item.id !== id));
     };
 
-
     const handleAddButton = () => {
         setDisplay(true);
     };
-
-
 
     const handlEditButton = (id) => {
         setEditDisplay(true);
