@@ -24,6 +24,7 @@ $mobile-width: 480;
       width: 100%;
       display: flex;
       flex-direction: column;
+      gap: 0px;
     }
 
     .header {
@@ -37,7 +38,7 @@ $mobile-width: 480;
 
       @include mobile {
         width: 100%;
-        margin: 0px;
+        margin: 0 0 20px 0;
       }
 
       img {
@@ -111,7 +112,7 @@ $mobile-width: 480;
       @include mobile {
         width: 100%;
         margin-top: 0px;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         padding: 31px;
         padding-left: 50px;
       }
@@ -125,6 +126,7 @@ $mobile-width: 480;
 
     @include mobile {
       flex-direction: column;
+      gap: 0px;
     }
 
     .chart-container {
@@ -140,8 +142,7 @@ $mobile-width: 480;
       @include mobile {
         width: 414px;
         height: 300px;
-        padding: 0px;
-        margin-left: 0px;
+        margin: 0 0 20px 0;
       }
     }
 
