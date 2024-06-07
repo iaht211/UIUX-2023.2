@@ -22,6 +22,8 @@ $mobile-width: 480;
         justify-content: space-between;
         padding: 20px;
         width: 1110px;
+        margin-bottom: 20px;
+        margin-left: 53px;
 
         @include mobile {
             width: 414px;
@@ -76,6 +78,7 @@ $mobile-width: 480;
             align-items: center;
             // margin-left: 175px;
 
+
             .profile {
                 display: flex;
                 align-items: center;
@@ -105,6 +108,6 @@ $mobile-width: 480;
     }
 
     .button {
-        padding-left: 10px; 
+        padding-left: 10px;
     }
 }
