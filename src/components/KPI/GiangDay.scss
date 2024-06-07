@@ -18,6 +18,9 @@ $mobile-width: 480;
     .button {
         padding-left: 53px;
 
+        @include mobile() {
+            margin-left: -310px;
+        }
         .add-button {
             background-color: #82AAE3;
             border-radius: 50%;
