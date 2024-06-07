@@ -5,11 +5,9 @@ import { GrAdd } from "react-icons/gr";
 
 const Note = () => {
   const notesData = [
-    { label: 'Nhiệm vụ 1: Học 100 từ vựng', value: 'meeting' },
-    { label: 'Nhiệm vụ 1: Học 100 từ vựng', value: 'project-updates' },
-    { label: 'Nhiệm vụ 1: Học 100 từ vựng', value: 'todo-list' },
-    { label: 'Nhiệm vụ 1: Học 100 từ vựng', value: 'reminders' },
-    { label: 'Nhiệm vụ 1: Học 100 từ vựng', value: 'grocery-list' }, // Add more notes as needed
+    { label: 'Nhiệm vụ 1: Viết báo cáo', value: 'meeting' },
+    { label: 'Nhiệm vụ 2: Chấm bài về nhà', value: 'project-updates' },
+    { label: 'Nhiệm vụ 3: Giảng dạy UI&UX', value: 'todo-list' },
   ];
 
   const onChange = (checkedValues) => {
@@ -30,10 +28,10 @@ const Note = () => {
           </Checkbox>
         </div>
       ))}
-      <div className='add-note'>
+      {/* <div className='add-note'>
       <GrAdd />
       <span style={{color: 'rgba(0, 0, 0, 0.2)'}}>Thêm ghi chú</span>
-      </div>
+      </div> */}
     </div>
   );
 };
