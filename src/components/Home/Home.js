@@ -10,7 +10,7 @@ import kpiImg from '../../assets/Remove-bg 1.png'
 
 const Home = () => {
     const [chartData, setChartData] = useState({
-        labels: ["Project 1", "Project 2", "Project 3", "Project 4", "Project 5"],
+        labels: ["UI&UX", "Chấm bài về nhà", "Giảng day UI&UX", "Nhập môn CNPM", "TTNT"],
         datasets: [
             {
                 label: "Thực tế",
@@ -82,12 +82,12 @@ const Home = () => {
                         <span>Cùng nhau hoàn thành công việc nhé</span>
                         <div className="statistical">
                             <div className="left">
-                                <span>số lượng nhiệm vụ hôm nay<br></br></span>
+                                <span>Số lượng nhiệm vụ hôm nay<br></br></span>
                                 <span>12</span>
 
                             </div>
                             <div className="right">
-                                <span>tổng số nhiệm vụ <br/><br/></span>
+                                <span>Tổng số nhiệm vụ <br/><br/></span>
                                 <span>12</span>
                             </div>
                         </div>
