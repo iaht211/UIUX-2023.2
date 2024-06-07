@@ -37,7 +37,7 @@ function CalendarMain() {
     ];
 
     return (
-        <div>
+        <div className="calender-page" >
             <FullCalendar
                 plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
                 initialView={"dayGridWeek"}

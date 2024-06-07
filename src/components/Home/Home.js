@@ -82,12 +82,12 @@ const Home = () => {
                         <span>Cùng nhau hoàn thành công việc nhé</span>
                         <div className="statistical">
                             <div className="left">
-                                <span>số lượng nhiệm vụ hôm nay<br></br></span>
+                                <span>Số lượng nhiệm vụ hôm nay<br></br></span>
                                 <span>12</span>
 
                             </div>
                             <div className="right">
-                                <span>tổng số nhiệm vụ <br/><br/></span>
+                                <span>Tổng số nhiệm vụ <br/><br/></span>
                                 <span>12</span>
                             </div>
                         </div>

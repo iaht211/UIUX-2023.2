@@ -16,4 +16,23 @@
     background-color: #a6e0ec !important; /* Change the background color on hover if desired */
     color: #000000 !important;
   }
+
+
+  .calender-page {
+    margin-top: 50px;
+  }
+
+  $mobile-width: 480;
+
+@mixin mobile {
+    @media (max-width: #{$mobile-width - 1px}) {
+        @content;
+    }
+}
+
+@include mobile() {
+  .calender-page {
+    margin-top: 0px;
+  }
+}
   
