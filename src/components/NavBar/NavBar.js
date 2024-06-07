@@ -89,7 +89,7 @@ const NavBar = () => {
                         fontWeight: 500,
                         letterSpacing: 0.33,
                         wordWrap: 'break-word'
-                    }}>Linh Nguyễn</div>
+                    }}></div>
                     <div className="avatar">
                         <img style={{ width: 50, height: 50 }} src={avatarGirl} alt="avatar" />
                     </div>
