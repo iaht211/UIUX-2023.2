@@ -61,6 +61,10 @@
 
 // //@include mobile {} // Kích hoạt mixin mobile
 
+.statistical-container {
+    margin-top: 50px;
+}
+
 $mobile-width: 480;
 
 @mixin mobile {
