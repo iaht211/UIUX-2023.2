@@ -9,6 +9,7 @@ $mobile-width: 480;
 
 .navbar-content {
     width: 100%;
+    background: linear-gradient(to right, white, #a6e0ec);
 
     @include mobile {
         margin-bottom: 20px;

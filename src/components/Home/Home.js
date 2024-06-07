@@ -15,13 +15,13 @@ const Home = () => {
             {
                 label: "Thực tế",
                 data: [20, 70, 50, 80, 120],
-                backgroundColor: '#4A3AFF',
+                backgroundColor: '#00c2dc',
                 borderWidth: 1,
             },
             {
                 label: "Mục tiêu",
                 data: [80, 50, 70, 70, 100],
-                backgroundColor: '#93AAFD',
+                backgroundColor: '#a6e0ec',
                 borderWidth: 1,
             }
         ],
