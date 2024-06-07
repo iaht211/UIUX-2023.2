@@ -74,7 +74,7 @@ $mobile-width: 480;
             margin: 0;
             .content{
                 .chart-week {
-                    margin:0px 0px 10px 0px;
+                    margin:0px 0px 20px 0px;
                     padding: 0px;
         
                     .chart-container {
@@ -83,21 +83,24 @@ $mobile-width: 480;
                     }
                 }
                 .chart-month {
-                    margin: 0;
-                    margin:0px 0px 10px 0px;
+                    //margin: 0;
+                    margin:0px 0px 20px 0px;
                     
         
                     .chart-container {
                         padding: 0;
+                        margin: 0;
                         background-color: white;
                     }
         
                 }
                 .chart-year{
-                    margin: 0;
+                    margin:0px 0px 20px 0px;
 
                     .chart-container {
                         margin: 0px;
+                        //margin:0px 0px 20px 0px;
+                        padding: 0;
                     }
                 }
             }
