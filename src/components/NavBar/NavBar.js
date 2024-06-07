@@ -82,14 +82,7 @@ const NavBar = () => {
                     <img style={{ width: 40, height: 40 }} src={notifi_logo} alt="notification logo" />
                 </div>
                 <div className='profile'>
-                    <div style={{
-                        color: 'rgba(35.70, 66.63, 229.06, 0.56)',
-                        fontSize: 15,
-                        fontFamily: 'Poppins',
-                        fontWeight: 500,
-                        letterSpacing: 0.33,
-                        wordWrap: 'break-word'
-                    }}>Linh Nguyễn</div>
+                    
                     <div className="avatar">
                         <img style={{ width: 50, height: 50 }} src={avatarGirl} alt="avatar" />
                     </div>
