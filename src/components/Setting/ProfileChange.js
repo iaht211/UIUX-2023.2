@@ -4,6 +4,7 @@ import { FaUserGraduate } from 'react-icons/fa';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSave, faEdit } from '@fortawesome/free-solid-svg-icons'
 import avatar from '../../assets/avatar.svg';
+import avatarGirl from '../../assets/christina-wocintechchat-com-0Zx1bDv5BNY-unsplash_ccexpress (1) 1.png';
 import { useNavigate } from 'react-router-dom';
 import { FaArrowLeft } from "react-icons/fa";
 
@@ -15,7 +16,7 @@ const ProfileChange = () => {
   });
 
   const [profileData, setProfileData] = useState({
-    email: 'long@sis.hust.edu.vn',
+    email: 'linh@sis.hust.edu.vn',
     dob: '20/02/2003',
     phone: '099.999.1111',
     class: 'CNTT Việt Nhật 03 - K66',
@@ -45,9 +46,9 @@ const ProfileChange = () => {
       </div>
       <div className="header">
         <div className="avatar">
-          <img src={avatar} alt="Avatar" />
+          <img src={avatarGirl} alt="Avatar" />
         </div>
-        <div className="name">Quyền Chí Long</div>
+        <div className="name">Linh Nguyễn</div>
         <div className="id">20210000</div>
       </div>
       <div className="info-container">
