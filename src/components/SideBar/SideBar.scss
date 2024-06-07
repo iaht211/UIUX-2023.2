@@ -1,6 +1,9 @@
 .pro-sidebar>.pro-sidebar-inner {
-    background-color: #82AAE3;
+    background-color: #ffffff;
     color: #ffffff;
+    .pro-item-content {
+        color: #000000;
+    }
 }
 
 .sidebar-btn-wrapper {
@@ -35,7 +38,7 @@
 }
 
 .active {
-    background-color: #00bfff; // Change this to your desired active background color
+    background-color: #a6e0ec; // Change this to your desired active background color
     color: white; // Change this to your desired active text color
 }
 

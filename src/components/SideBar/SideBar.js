@@ -46,7 +46,7 @@ const SideBar = (props) => {
                     }}
                 >
                     <GiReactor size={'3em'} color='00bfff' />
-                    <span>KPI</span>
+                    <span style={{color: '#000000'}}>KPI</span>
                 </div>
             </SidebarHeader>
 
