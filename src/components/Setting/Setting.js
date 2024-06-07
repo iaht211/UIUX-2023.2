@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from 'react-router-dom';
 import ToggleSwitch from '../Setting/ToggleSwitch';
 import avatar from '../../assets/avatar.svg';
+import avatarGirl from '../../assets/christina-wocintechchat-com-0Zx1bDv5BNY-unsplash_ccexpress (1) 1.png';
 import key from '../../assets/Key.svg';
 import ho_so from '../../assets/flopy.svg';
 import user from '../../assets/Person.svg';
@@ -16,9 +17,9 @@ const Setting = () => {
             <div className="dang-xuat">
                 <div className='profile'>
                     <div className="avatar">
-                        <img src={avatar} alt="Avatar" />
+                        <img src={avatarGirl} alt="Avatar" />
                     </div>
-                    <span className='hoten'>Quyền Chí Long</span>
+                    <span className='hoten'>Linh Nguyễn</span>
                 </div>
                 <button className='button-dang-xuat-1' onClick={() => { navigate("/login") }}>Đăng xuất</button>
             </div>
